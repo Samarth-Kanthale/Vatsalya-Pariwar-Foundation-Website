@@ -308,35 +308,46 @@
                   <h3 class="card-title">Want to Help? Get in Touch</h3>
                   <p></p>
 
-                  <form class="php-email-form mt-4" action="forms/contact.php">
+                  <form class="php-email-form mt-4" name="donation-form" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                    <!-- Hidden input required by Netlify -->
+                    <input type="hidden" name="form-name" value="donation-form" />
+
+                    <!-- Honeypot field (anti-spam) -->
+                    <p hidden>
+                      <label>Don’t fill this out: <input name="bot-field" /></label>
+                    </p>
+
                     <div class="mb-3">
-                      <input type="text" name="name" class="form-control" placeholder="Full Name" required="">
+                      <input type="text" name="name" class="form-control" placeholder="Full Name" required>
                     </div>
                     <div class="mb-3">
-                      <input type="email" name="email" class="form-control" placeholder="Email Address" required="">
+                      <input type="email" name="email" class="form-control" placeholder="Email Address" required>
                     </div>
                     <div class="mb-3">
                       <input type="tel" name="phone" class="form-control" placeholder="Phone Number">
                     </div>
                     <div class="mb-3">
-                      <select name="subject" class="form-select" required="">
-                        <option value="" selected="" disabled="">Donation Type</option>
-                        <option value="Undergraduate">Online</option>
-                        <option value="Graduate">In-Kind</option>
-                        <option value="Doctoral">Monthly</option>
-                        <option value="Certificate">Campaign Specific</option>
+                      <select name="subject" class="form-select" required>
+                        <option value="" selected disabled>Donation Type</option>
+                        <option value="Online">Online</option>
+                        <option value="In-Kind">In-Kind</option>
+                        <option value="Monthly">Monthly</option>
+                        <option value="Campaign Specific">Campaign Specific</option>
                       </select>
                     </div>
                     <div class="mb-3">
-                      <textarea name="message" class="form-control" rows="3" placeholder="Messages" required=""></textarea>
+                      <textarea name="message" class="form-control" rows="3" placeholder="Messages" required></textarea>
                     </div>
+                    
                     <div class="loading">Loading</div>
                     <div class="error-message"></div>
                     <div class="sent-message">Your request has been sent. Thank you!</div>
+
                     <div class="text-center">
                       <button type="submit" class="btn btn-primary">Submit Request</button>
                     </div>
                   </form>
+
                 </div>
               </div>
             </div>

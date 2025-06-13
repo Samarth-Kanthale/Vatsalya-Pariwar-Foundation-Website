@@ -234,23 +234,31 @@
             <div class="event-sidebar">
               <div class="sidebar-widget registration-form" data-aos="fade-left" data-aos-delay="200">
                 <h3>Register for this Event</h3>
-                <form>
+                <form name="volunteer-registration" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                  <!-- Hidden input required by Netlify -->
+                  <input type="hidden" name="form-name" value="volunteer-registration" />
+
+                  <!-- Honeypot field (anti-spam) -->
+                  <p hidden>
+                    <label>Don’t fill this out: <input name="bot-field" /></label>
+                  </p>
+
                   <div class="mb-3">
                     <label for="name" class="form-label">Full Name</label>
-                    <input type="text" class="form-control" id="name" required="">
+                    <input type="text" class="form-control" id="name" name="name" required>
                   </div>
                   <div class="mb-3">
                     <label for="email" class="form-label">Email Address</label>
-                    <input type="email" class="form-control" id="email" required="">
+                    <input type="email" class="form-control" id="email" name="email" required>
                   </div>
                   <div class="mb-3">
                     <label for="phone" class="form-label">Phone Number</label>
-                    <input type="tel" class="form-control" id="phone">
+                    <input type="tel" class="form-control" id="phone" name="phone">
                   </div>
                   <div class="mb-3">
                     <label for="student-type" class="form-label">Area of Interest to Volunteer</label>
-                    <select class="form-select" id="student-type">
-                      <option selected="">Select an option</option>
+                    <select class="form-select" id="student-type" name="interest" required>
+                      <option selected disabled>Select an option</option>
                       <option value="elder">Elderly Care Assistant</option>
                       <option value="kitchen">Kitchen Help</option>
                       <option value="event-support">Event Support</option>
@@ -262,6 +270,7 @@
                     <button type="submit" class="btn btn-register">Register Now</button>
                   </div>
                 </form>
+
               </div>
 
               <div class="sidebar-widget organizer-info" data-aos="fade-left" data-aos-delay="300">
