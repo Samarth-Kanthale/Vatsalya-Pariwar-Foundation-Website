@@ -25,7 +25,7 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
 
   <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
+  <link id="theme-style" rel="stylesheet" href="assets/css/main.css">
 </head>
 
 <body class="students-life-page">
@@ -79,6 +79,12 @@
           </li>-->
           <li><a href="contact.html">Contact</a></li>
         </ul>
+        <select id="theme-switcher" style="position:fixed;top:10px;right:10px;z-index:9999;">
+          <option value="main">Default</option>
+          <option value="warm">Warm</option>
+          <option value="peace">Peace</option>
+          <option value="dark">Dark</option>
+        </select>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
@@ -709,6 +715,8 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/theme-switcher.js"></script>
+
 
 </body>
 
