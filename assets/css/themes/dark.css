@@ -5,4 +5,11 @@
   --accent-color: #bb86fc;
   --surface-color: #1e1e1e;
   --contrast-color: #ffffff;
+
+  --nav-color: rgba(255, 255, 255, 0.75);
+  --nav-hover-color: #bb86fc;
+  --nav-mobile-background-color: #1e1e1e;
+  --nav-dropdown-background-color: #1e1e1e;
+  --nav-dropdown-color: #e0e0e0;
+  --nav-dropdown-hover-color: #bb86fc;
 }
