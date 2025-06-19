@@ -5,15 +5,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Apply saved theme
   const themePath = theme === "main" ? "assets/css/main.css" : `assets/css/themes/${theme}.css`;
-  themeLink.href = themePath;
+  if (themeLink) themeLink.href = themePath;
   if (switcher) switcher.value = theme;
 
-  // Change theme on selection
+  // Handle dropdown change
   if (switcher) {
     switcher.addEventListener("change", () => {
       const selected = switcher.value;
       const newPath = selected === "main" ? "assets/css/main.css" : `assets/css/themes/${selected}.css`;
-      themeLink.href = newPath;
+      if (themeLink) themeLink.href = newPath;
       localStorage.setItem("theme", selected);
     });
   }
