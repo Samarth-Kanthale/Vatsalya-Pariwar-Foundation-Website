@@ -1113,6 +1113,7 @@
       <a href="#" onclick="setLang('te', event)">తెలుగు</a>
       <a href="#" onclick="setLang('pa', event)">ਪੰਜਾਬੀ</a>
     </div>
+
   </footer>
 
   <!-- Scroll Top -->
@@ -1136,6 +1137,7 @@
   <script src="assets/js/theme-switcher.js"></script>
 
   <script>
+    // STEP 1: Load the widget (forces iframe injection)
     function googleTranslateElementInit() {
       new google.translate.TranslateElement({
         pageLanguage: 'en',
@@ -1144,40 +1146,55 @@
       }, 'google_translate_element');
     }
 
+    // STEP 2: Click the language inside iframe
     function setLang(lang, event) {
-      event.preventDefault();
+      if (event) event.preventDefault();
       localStorage.setItem("langPref", lang);
-      const iframe = document.querySelector('iframe.goog-te-menu-frame');
-      if (!iframe) return;
 
-      const innerDoc = iframe.contentDocument || iframe.contentWindow.document;
-      const items = innerDoc.querySelectorAll(".goog-te-menu2-item span.text");
+      const interval = setInterval(() => {
+        const iframe = document.querySelector("iframe.goog-te-menu-frame");
+        if (!iframe) return;
 
-      for (let i = 0; i < items.length; i++) {
-        if (items[i].innerText.toLowerCase() === getLangName(lang).toLowerCase()) {
-          items[i].click();
-          return;
+        try {
+          const doc = iframe.contentDocument || iframe.contentWindow.document;
+          const spans = doc.querySelectorAll(".goog-te-menu2-item span.text");
+          const langName = getLangName(lang).toLowerCase();
+
+          for (const span of spans) {
+            if (span.innerText.toLowerCase() === langName) {
+              span.click();
+              clearInterval(interval);
+              return;
+            }
+          }
+        } catch (e) {
+          // Still loading iframe
         }
-      }
+      }, 500);
+
+      setTimeout(() => clearInterval(interval), 8000); // Stop after 8s
     }
 
+    // STEP 3: Translate on reload
     function getLangName(code) {
-      const map = {
+      const names = {
         en: "English", hi: "Hindi", mr: "Marathi", bn: "Bengali", ta: "Tamil",
         gu: "Gujarati", kn: "Kannada", ml: "Malayalam", te: "Telugu", pa: "Punjabi"
       };
-      return map[code] || "English";
+      return names[code] || "English";
     }
 
-    window.addEventListener("load", function () {
-      const saved = localStorage.getItem("langPref");
-      if (saved && saved !== "en") {
-        setTimeout(() => setLang(saved, { preventDefault: () => {} }), 1500);
+    window.addEventListener("load", () => {
+      const savedLang = localStorage.getItem("langPref");
+      if (savedLang && savedLang !== "en") {
+        setTimeout(() => setLang(savedLang, { preventDefault: () => {} }), 2000);
       }
     });
   </script>
 
+  <!-- Force-load Google Translate widget -->
   <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 </body>
 
 </html>

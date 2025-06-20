@@ -8262,19 +8262,17 @@ section,
 
 .language-footer-bar {
   background: var(--accent-color);
-  color: var(--contrast-color);
-  padding: 12px 16px;
+  padding: 12px;
   text-align: center;
-  font-size: 14px;
+  color: var(--contrast-color);
   font-family: var(--nav-font);
+  font-size: 14px;
 }
-
 .language-footer-bar a {
-  margin: 0 6px;
+  margin: 0 8px;
   color: var(--contrast-color);
   text-decoration: none;
 }
-
 .language-footer-bar a:hover {
   text-decoration: underline;
 }
