@@ -36,7 +36,7 @@
 
       <a href="index.html" class="logo d-flex align-items-center">
         <!-- Uncomment the line below if you also wish to use an image logo -->
-        <img src="assets/img/vatsalya-symbol.svg" alt="Vatsalya - Old Age Home" class="logo-image">
+        <img src="assets/img/vatsalya-symbol.svg" alt="Vatsalya Logo" class="logo-image">
         <img src="assets/img/vatsalyalogo.svg" alt="Vatsalya - Old Age Home" class="logo-image">
     
       </a>
@@ -1136,53 +1136,57 @@
   <script src="assets/js/main.js"></script>
   <script src="assets/js/theme-switcher.js"></script>
 
+  <div id="google_translate_element" style="display: none;"></div>
+
   <script>
-      function googleTranslateElementInit() {
-        new google.translate.TranslateElement({
-          pageLanguage: 'en',
-          includedLanguages: 'en,hi,mr,bn,ta,gu,kn,ml,te,pa',
-          layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-        }, 'google_translate_element');
-      }
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,hi,mr,bn,ta,gu,kn,ml,te,pa',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
+    }
 
-      function translatePage(lang, event) {
-        event.preventDefault();
-        localStorage.setItem("langPref", lang);
+    function getLangName(code) {
+      const langMap = {
+        en: "English", hi: "Hindi", mr: "Marathi", bn: "Bengali", ta: "Tamil",
+        gu: "Gujarati", kn: "Kannada", ml: "Malayalam", te: "Telugu", pa: "Punjabi"
+      };
+      return langMap[code] || "English";
+    }
 
-        const interval = setInterval(() => {
-          const iframe = document.querySelector("iframe.goog-te-menu-frame");
-          if (!iframe) return;
+    function translatePage(lang, event) {
+      event.preventDefault();
+      localStorage.setItem("langPref", lang);
 
-          const innerDoc = iframe.contentDocument || iframe.contentWindow.document;
-          const spans = innerDoc.querySelectorAll(".goog-te-menu2-item span.text");
+      const tryClick = setInterval(() => {
+        const iframe = document.querySelector("iframe.goog-te-menu-frame");
+        if (!iframe) return;
 
-          for (const span of spans) {
-            if (span.innerText.toLowerCase() === getLangName(lang).toLowerCase()) {
-              span.click();
-              clearInterval(interval);
-              return;
-            }
+        const innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+        const langSpans = innerDoc.querySelectorAll(".goog-te-menu2-item span.text");
+
+        for (const span of langSpans) {
+          if (span.innerText.toLowerCase() === getLangName(lang).toLowerCase()) {
+            span.click();
+            clearInterval(tryClick);
           }
-        }, 300);
+        }
+      }, 500);
 
-        setTimeout(() => clearInterval(interval), 5000);
+      setTimeout(() => clearInterval(tryClick), 5000);
+    }
+
+    // Apply saved language on reload
+    window.addEventListener("load", () => {
+      const savedLang = localStorage.getItem("langPref");
+      if (savedLang && savedLang !== "en") {
+        translatePage(savedLang, { preventDefault: () => {} });
       }
+    });
+  </script>
 
-      function getLangName(code) {
-        const map = {
-          en: "English", hi: "Hindi", mr: "Marathi", bn: "Bengali", ta: "Tamil",
-          gu: "Gujarati", kn: "Kannada", ml: "Malayalam", te: "Telugu", pa: "Punjabi"
-        };
-        return map[code] || "English";
-      }
-
-      // Auto-apply saved language on page load
-      window.addEventListener("load", () => {
-        const savedLang = localStorage.getItem("langPref");
-        if (savedLang && savedLang !== "en") translatePage(savedLang, { preventDefault: () => {} });
-      });
-    </script>
-    
+  <!-- Load Google Translate script last -->
   <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 
