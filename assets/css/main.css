@@ -8260,38 +8260,33 @@ section,
   color: var(--nav-dropdown-color);
 }
 
-.language-sticky-bar {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background-color: var(--accent-color); /* uses your site theme */
+.language-footer-bar {
+  background-color: var(--accent-color);
   color: var(--contrast-color);
-  padding: 10px 20px;
+  padding: 12px 20px;
   text-align: center;
-  z-index: 9999;
   font-family: var(--nav-font);
   font-size: 14px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px;
 }
 
-.language-sticky-bar a {
+.language-footer-bar a {
   color: var(--contrast-color);
   text-decoration: none;
+  margin: 0 6px;
   font-weight: 500;
 }
 
-.language-sticky-bar a:hover {
+.language-footer-bar a:hover {
+  color: #fff;
   text-decoration: underline;
 }
 
-.language-sticky-bar .label {
-  margin-right: 6px;
+.language-footer-bar .label {
+  margin-right: 8px;
   font-weight: 600;
   text-transform: uppercase;
 }
+
 
 /*--------------------------------------------------------------
 # Starter Section Section
