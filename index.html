@@ -1098,20 +1098,20 @@
     </div>
 
     <!-- Hidden Google Translate Widget -->
-    <div id="google_translate_element" class="language-footer-bar"></div>
+    <div id="google_translate_element" style="display:none;"></div>
 
     <div class="language-footer-bar">
-      <span class="label">Change Language:</span>
-      <a href="#" onclick="translatePage('en', event)">English</a>
-      <a href="#" onclick="translatePage('hi', event)">हिंदी</a>
-      <a href="#" onclick="translatePage('mr', event)">मराठी</a>
-      <a href="#" onclick="translatePage('bn', event)">বাংলা</a>
-      <a href="#" onclick="translatePage('ta', event)">தமிழ்</a>
-      <a href="#" onclick="translatePage('gu', event)">ગુજરાતી</a>
-      <a href="#" onclick="translatePage('kn', event)">ಕನ್ನಡ</a>
-      <a href="#" onclick="translatePage('ml', event)">മലയാളം</a>
-      <a href="#" onclick="translatePage('te', event)">తెలుగు</a>
-      <a href="#" onclick="translatePage('pa', event)">ਪੰਜਾਬੀ</a>
+      <span>Change Language:</span>
+      <a href="#" onclick="setLang('en', event)">English</a>
+      <a href="#" onclick="setLang('hi', event)">हिंदी</a>
+      <a href="#" onclick="setLang('mr', event)">मराठी</a>
+      <a href="#" onclick="setLang('bn', event)">বাংলা</a>
+      <a href="#" onclick="setLang('ta', event)">தமிழ்</a>
+      <a href="#" onclick="setLang('gu', event)">ગુજરાતી</a>
+      <a href="#" onclick="setLang('kn', event)">ಕನ್ನಡ</a>
+      <a href="#" onclick="setLang('ml', event)">മലയാളം</a>
+      <a href="#" onclick="setLang('te', event)">తెలుగు</a>
+      <a href="#" onclick="setLang('pa', event)">ਪੰਜਾਬੀ</a>
     </div>
   </footer>
 
@@ -1144,6 +1144,23 @@
       }, 'google_translate_element');
     }
 
+    function setLang(lang, event) {
+      event.preventDefault();
+      localStorage.setItem("langPref", lang);
+      const iframe = document.querySelector('iframe.goog-te-menu-frame');
+      if (!iframe) return;
+
+      const innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+      const items = innerDoc.querySelectorAll(".goog-te-menu2-item span.text");
+
+      for (let i = 0; i < items.length; i++) {
+        if (items[i].innerText.toLowerCase() === getLangName(lang).toLowerCase()) {
+          items[i].click();
+          return;
+        }
+      }
+    }
+
     function getLangName(code) {
       const map = {
         en: "English", hi: "Hindi", mr: "Marathi", bn: "Bengali", ta: "Tamil",
@@ -1152,48 +1169,15 @@
       return map[code] || "English";
     }
 
-    function translatePage(lang, event) {
-      if (event) event.preventDefault();
-      localStorage.setItem("langPref", lang);
-
-      const tryTranslate = () => {
-        const iframe = document.querySelector("iframe.goog-te-menu-frame");
-        if (!iframe) return false;
-
-        let innerDoc;
-        try {
-          innerDoc = iframe.contentDocument || iframe.contentWindow.document;
-        } catch (e) {
-          return false;
-        }
-
-        const langSpans = innerDoc.querySelectorAll(".goog-te-menu2-item span.text");
-        for (const span of langSpans) {
-          if (span.innerText.toLowerCase() === getLangName(lang).toLowerCase()) {
-            span.click();
-            return true;
-          }
-        }
-        return false;
-      };
-
-      const interval = setInterval(() => {
-        if (tryTranslate()) clearInterval(interval);
-      }, 500);
-
-      setTimeout(() => clearInterval(interval), 10000);
-    }
-
-    window.addEventListener("load", () => {
-      const savedLang = localStorage.getItem("langPref");
-      if (savedLang && savedLang !== "en") {
-        setTimeout(() => translatePage(savedLang, { preventDefault: () => {} }), 1000);
+    window.addEventListener("load", function () {
+      const saved = localStorage.getItem("langPref");
+      if (saved && saved !== "en") {
+        setTimeout(() => setLang(saved, { preventDefault: () => {} }), 1500);
       }
     });
-</script>
+  </script>
 
-<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
+  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 
 </html>
