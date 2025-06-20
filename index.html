@@ -1097,6 +1097,72 @@
       </div>
     </div>
 
+    <!-- Hidden Google Translate Widget -->
+    <div id="google_translate_element" style="display:none;"></div>
+
+    <!-- Sticky Language Bar -->
+    <div class="language-sticky-bar">
+      <span class="label">CHANGE LANGUAGE :</span>
+      <a href="#" onclick="translatePage('en', event)">English</a>
+      <a href="#" onclick="translatePage('hi', event)">हिंदी</a>
+      <a href="#" onclick="translatePage('mr', event)">मराठी</a>
+      <a href="#" onclick="translatePage('bn', event)">বাংলা</a>
+      <a href="#" onclick="translatePage('ta', event)">தமிழ்</a>
+      <a href="#" onclick="translatePage('gu', event)">ગુજરાતી</a>
+      <a href="#" onclick="translatePage('kn', event)">ಕನ್ನಡ</a>
+      <a href="#" onclick="translatePage('ml', event)">മലയാളം</a>
+      <a href="#" onclick="translatePage('te', event)">తెలుగు</a>
+      <a href="#" onclick="translatePage('pa', event)">ਪੰਜਾਬੀ</a>
+    </div>
+
+    <script>
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+          pageLanguage: 'en',
+          includedLanguages: 'en,hi,mr,bn,ta,gu,kn,ml,te,pa',
+          layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+        }, 'google_translate_element');
+      }
+
+      function translatePage(lang, event) {
+        event.preventDefault();
+        localStorage.setItem("langPref", lang);
+
+        const interval = setInterval(() => {
+          const iframe = document.querySelector("iframe.goog-te-menu-frame");
+          if (!iframe) return;
+
+          const innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+          const spans = innerDoc.querySelectorAll(".goog-te-menu2-item span.text");
+
+          for (const span of spans) {
+            if (span.innerText.toLowerCase() === getLangName(lang).toLowerCase()) {
+              span.click();
+              clearInterval(interval);
+              return;
+            }
+          }
+        }, 300);
+
+        setTimeout(() => clearInterval(interval), 5000);
+      }
+
+      function getLangName(code) {
+        const map = {
+          en: "English", hi: "Hindi", mr: "Marathi", bn: "Bengali", ta: "Tamil",
+          gu: "Gujarati", kn: "Kannada", ml: "Malayalam", te: "Telugu", pa: "Punjabi"
+        };
+        return map[code] || "English";
+      }
+
+      // Auto-apply saved language on page load
+      window.addEventListener("load", () => {
+        const savedLang = localStorage.getItem("langPref");
+        if (savedLang && savedLang !== "en") translatePage(savedLang, { preventDefault: () => {} });
+      });
+    </script>
+
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   </footer>
 
   <!-- Scroll Top -->
