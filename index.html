@@ -1147,34 +1147,42 @@
       }, 'google_translate_element');
     }
 
-    function getLangName(code) {
-      const langMap = {
-        en: "English", hi: "Hindi", mr: "Marathi", bn: "Bengali", ta: "Tamil",
-        gu: "Gujarati", kn: "Kannada", ml: "Malayalam", te: "Telugu", pa: "Punjabi"
-      };
-      return langMap[code] || "English";
-    }
-
     function translatePage(lang, event) {
-      event.preventDefault();
+      if (event) event.preventDefault();
       localStorage.setItem("langPref", lang);
 
-      const tryClick = setInterval(() => {
+      // Load Google Translate iframe if not yet loaded
+      const interval = setInterval(() => {
         const iframe = document.querySelector("iframe.goog-te-menu-frame");
-        if (!iframe) return;
 
-        const innerDoc = iframe.contentDocument || iframe.contentWindow.document;
-        const langSpans = innerDoc.querySelectorAll(".goog-te-menu2-item span.text");
+        if (iframe) {
+          try {
+            const innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+            const langSpans = innerDoc.querySelectorAll(".goog-te-menu2-item span.text");
 
-        for (const span of langSpans) {
-          if (span.innerText.toLowerCase() === getLangName(lang).toLowerCase()) {
-            span.click();
-            clearInterval(tryClick);
+            for (const span of langSpans) {
+              if (span.innerText.toLowerCase() === getLangName(lang).toLowerCase()) {
+                span.click();
+                clearInterval(interval);
+                return;
+              }
+            }
+          } catch (e) {
+            console.warn("Translate frame not yet ready...");
           }
         }
       }, 500);
 
-      setTimeout(() => clearInterval(tryClick), 5000);
+      // Stop trying after 10 seconds
+      setTimeout(() => clearInterval(interval), 10000);
+    }
+
+    function getLangName(code) {
+      const map = {
+        en: "English", hi: "Hindi", mr: "Marathi", bn: "Bengali", ta: "Tamil",
+        gu: "Gujarati", kn: "Kannada", ml: "Malayalam", te: "Telugu", pa: "Punjabi"
+      };
+      return map[code] || "English";
     }
 
     // Apply saved language on reload
