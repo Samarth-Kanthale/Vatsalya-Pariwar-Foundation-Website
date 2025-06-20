@@ -8294,3 +8294,8 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+.logo-image {
+  max-height: 60px !important;
+  width: 100%;
+}
