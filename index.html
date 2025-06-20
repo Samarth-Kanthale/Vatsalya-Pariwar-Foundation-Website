@@ -1147,36 +1147,6 @@
       }, 'google_translate_element');
     }
 
-    function translatePage(lang, event) {
-      if (event) event.preventDefault();
-      localStorage.setItem("langPref", lang);
-
-      // Load Google Translate iframe if not yet loaded
-      const interval = setInterval(() => {
-        const iframe = document.querySelector("iframe.goog-te-menu-frame");
-
-        if (iframe) {
-          try {
-            const innerDoc = iframe.contentDocument || iframe.contentWindow.document;
-            const langSpans = innerDoc.querySelectorAll(".goog-te-menu2-item span.text");
-
-            for (const span of langSpans) {
-              if (span.innerText.toLowerCase() === getLangName(lang).toLowerCase()) {
-                span.click();
-                clearInterval(interval);
-                return;
-              }
-            }
-          } catch (e) {
-            console.warn("Translate frame not yet ready...");
-          }
-        }
-      }, 500);
-
-      // Stop trying after 10 seconds
-      setTimeout(() => clearInterval(interval), 10000);
-    }
-
     function getLangName(code) {
       const map = {
         en: "English", hi: "Hindi", mr: "Marathi", bn: "Bengali", ta: "Tamil",
@@ -1185,17 +1155,48 @@
       return map[code] || "English";
     }
 
-    // Apply saved language on reload
+    function translatePage(lang, event) {
+      if (event) event.preventDefault();
+      localStorage.setItem("langPref", lang);
+
+      const tryTranslate = () => {
+        const iframe = document.querySelector("iframe.goog-te-menu-frame");
+        if (!iframe) return false;
+
+        let innerDoc;
+        try {
+          innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+        } catch (e) {
+          return false;
+        }
+
+        const langSpans = innerDoc.querySelectorAll(".goog-te-menu2-item span.text");
+        for (const span of langSpans) {
+          if (span.innerText.toLowerCase() === getLangName(lang).toLowerCase()) {
+            span.click();
+            return true;
+          }
+        }
+        return false;
+      };
+
+      const interval = setInterval(() => {
+        if (tryTranslate()) clearInterval(interval);
+      }, 500);
+
+      setTimeout(() => clearInterval(interval), 10000);
+    }
+
     window.addEventListener("load", () => {
       const savedLang = localStorage.getItem("langPref");
       if (savedLang && savedLang !== "en") {
-        translatePage(savedLang, { preventDefault: () => {} });
+        setTimeout(() => translatePage(savedLang, { preventDefault: () => {} }), 1000);
       }
     });
-  </script>
+</script>
 
-  <!-- Load Google Translate script last -->
-  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 </body>
 
 </html>
