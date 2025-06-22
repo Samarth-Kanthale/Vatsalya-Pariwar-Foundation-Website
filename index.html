@@ -1097,21 +1097,9 @@
       </div>
     </div>
 
-    <div id="google_translate_element" style="position: absolute; opacity: 0; pointer-events: none;"></div>
+    <!-- Google Translate Language Selector -->
+    <div id="google_translate_element_footer" class="language-dropdown-footer"></div>
 
-    <div class="language-footer-bar">
-      <span>Change Language:</span>
-      <a href="javascript:void(0);" onclick="setLang('en', event)">English</a>
-      <a href="javascript:void(0);" onclick="setLang('hi', event)">हिंदी</a>
-      <a href="javascript:void(0);" onclick="setLang('mr', event)">मराठी</a>
-      <a href="javascript:void(0);" onclick="setLang('bn', event)">বাংলা</a>
-      <a href="javascript:void(0);" onclick="setLang('ta', event)">தமிழ்</a>
-      <a href="javascript:void(0);" onclick="setLang('gu', event)">ગુજરાતી</a>
-      <a href="javascript:void(0);" onclick="setLang('kn', event)">ಕನ್ನಡ</a>
-      <a href="javascript:void(0);" onclick="setLang('ml', event)">മലയാളം</a>
-      <a href="javascript:void(0);" onclick="setLang('te', event)">తెలుగు</a>
-      <a href="javascript:void(0);" onclick="setLang('pa', event)">ਪੰਜਾਬੀ</a>
-    </div>
   </footer>
 
   <!-- Scroll Top -->
@@ -1134,59 +1122,17 @@
   <script src="assets/js/main.js"></script>
   <script src="assets/js/theme-switcher.js"></script>
 
-  <script>
+  <script type="text/javascript">
     function googleTranslateElementInit() {
       new google.translate.TranslateElement({
         pageLanguage: 'en',
         includedLanguages: 'en,hi,mr,bn,ta,gu,kn,ml,te,pa',
         layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-      }, 'google_translate_element');
+      }, 'google_translate_element_footer');
     }
-
-    function getLangName(code) {
-      const map = {
-        en: "English", hi: "Hindi", mr: "Marathi", bn: "Bengali", ta: "Tamil",
-        gu: "Gujarati", kn: "Kannada", ml: "Malayalam", te: "Telugu", pa: "Punjabi"
-      };
-      return map[code] || "English";
-    }
-
-    function setLang(lang, event) {
-      if (event) event.preventDefault();
-      localStorage.setItem("langPref", lang);
-
-      const interval = setInterval(() => {
-        const iframe = document.querySelector("iframe.goog-te-menu-frame");
-        if (!iframe) return;
-
-        try {
-          const doc = iframe.contentDocument || iframe.contentWindow.document;
-          const spans = doc.querySelectorAll(".goog-te-menu2-item span.text");
-
-          for (const span of spans) {
-            if (span.innerText.toLowerCase() === getLangName(lang).toLowerCase()) {
-              span.click();
-              clearInterval(interval);
-              return;
-            }
-          }
-        } catch (e) {
-          // waiting...
-        }
-      }, 500);
-
-      setTimeout(() => clearInterval(interval), 10000);
-    }
-
-    window.addEventListener("load", () => {
-      const saved = localStorage.getItem("langPref");
-      if (saved && saved !== "en") {
-        setTimeout(() => setLang(saved, { preventDefault: () => {} }), 2000);
-      }
-    });
   </script>
-
   <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 
 </body>
 

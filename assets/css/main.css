@@ -8260,22 +8260,17 @@ section,
   color: var(--nav-dropdown-color);
 }
 
-.language-footer-bar {
+.language-dropdown-footer {
+  text-align: center;
+  padding: 12px 0;
+  font-family: var(--nav-font);
   background: var(--accent-color);
   color: var(--contrast-color);
-  padding: 12px;
-  text-align: center;
-  font-family: var(--nav-font);
-  font-size: 14px;
 }
-.language-footer-bar a {
+
+.language-dropdown-footer .goog-te-gadget {
   color: var(--contrast-color);
-  margin: 0 6px;
-  text-decoration: none;
-  cursor: pointer;
-}
-.language-footer-bar a:hover {
-  text-decoration: underline;
+  font-size: 14px;
 }
 
 /*--------------------------------------------------------------
