@@ -8285,9 +8285,6 @@ section,
 body {
   top: 0px !important;
 }
-body > .skiptranslate {
-  display: none !important;
-}
 
 /*--------------------------------------------------------------
 # Starter Section Section
