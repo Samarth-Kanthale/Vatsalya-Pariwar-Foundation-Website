@@ -8260,7 +8260,7 @@ section,
   color: var(--nav-dropdown-color);
 }
 
-/* Footer styling */
+
 .language-dropdown-footer {
   text-align: center;
   padding: 12px;
@@ -8278,12 +8278,12 @@ section,
   background: #fff;
 }
 
-/* Hide top translate banner */
+/* Hide Translate Banner */
 .goog-te-banner-frame.skiptranslate {
   display: none !important;
 }
 body {
-  top: 0px !important;
+  top: 0 !important;
 }
 
 /*--------------------------------------------------------------
