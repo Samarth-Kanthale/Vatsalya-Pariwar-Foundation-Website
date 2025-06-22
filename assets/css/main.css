@@ -8301,12 +8301,17 @@ section,
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
 }
 
+/* Hide Google Translate top banner */
 .goog-te-banner-frame.skiptranslate {
   display: none !important;
 }
-
 body {
-  top: 0px !important; /* Prevents content shift */
+  top: 0px !important;  /* Prevent page shift */
+}
+
+/* Also hide frame within body for older compatibility */
+body > .skiptranslate {
+  display: none !important;
 }
 
 /*--------------------------------------------------------------
