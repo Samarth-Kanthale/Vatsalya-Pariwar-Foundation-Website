@@ -8263,20 +8263,20 @@ section,
 .language-footer-bar {
   background: var(--accent-color);
   color: var(--contrast-color);
-  padding: 10px 16px;
+  padding: 12px;
   text-align: center;
-  font-size: 14px;
   font-family: var(--nav-font);
+  font-size: 14px;
 }
 .language-footer-bar a {
   color: var(--contrast-color);
+  margin: 0 6px;
   text-decoration: none;
-  margin: 0 8px;
-  font-weight: 500;
 }
 .language-footer-bar a:hover {
   text-decoration: underline;
 }
+
 
 /*--------------------------------------------------------------
 # Starter Section Section

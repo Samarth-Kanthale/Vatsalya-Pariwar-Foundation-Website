@@ -1097,10 +1097,9 @@
       </div>
     </div>
 
-    <!-- Hidden Translate Widget -->
-    <div id="google_translate_element" style="display: none;"></div>
+    <!-- Show widget briefly to load iframe -->
+    <div id="google_translate_element" style="position:absolute;opacity:0;pointer-events:none;"></div>
 
-    <!-- Language Switcher Bar -->
     <div class="language-footer-bar">
       <span>Change Language:</span>
       <a href="#" onclick="setLang('en', event)">English</a>
@@ -1114,6 +1113,7 @@
       <a href="#" onclick="setLang('te', event)">తెలుగు</a>
       <a href="#" onclick="setLang('pa', event)">ਪੰਜਾਬੀ</a>
     </div>
+
 
 
   </footer>
@@ -1139,7 +1139,6 @@
   <script src="assets/js/theme-switcher.js"></script>
 
   <script>
-    // Initialize Google Translate
     function googleTranslateElementInit() {
       new google.translate.TranslateElement({
         pageLanguage: 'en',
@@ -1148,18 +1147,16 @@
       }, 'google_translate_element');
     }
 
-    // Language Code to Display Name Map
     function getLangName(code) {
-      const map = {
+      const names = {
         en: "English", hi: "Hindi", mr: "Marathi", bn: "Bengali", ta: "Tamil",
         gu: "Gujarati", kn: "Kannada", ml: "Malayalam", te: "Telugu", pa: "Punjabi"
       };
-      return map[code] || "English";
+      return names[code] || "English";
     }
 
-    // Set Language
     function setLang(lang, event) {
-      event.preventDefault();
+      if (event) event.preventDefault();
       localStorage.setItem("langPref", lang);
 
       const interval = setInterval(() => {
@@ -1169,7 +1166,6 @@
         try {
           const doc = iframe.contentDocument || iframe.contentWindow.document;
           const spans = doc.querySelectorAll(".goog-te-menu2-item span.text");
-
           for (const span of spans) {
             if (span.innerText.toLowerCase() === getLangName(lang).toLowerCase()) {
               span.click();
@@ -1177,15 +1173,12 @@
               return;
             }
           }
-        } catch (e) {
-          // wait for iframe
-        }
+        } catch (e) {}
       }, 500);
 
       setTimeout(() => clearInterval(interval), 10000);
     }
 
-    // Apply saved language
     window.addEventListener("load", () => {
       const savedLang = localStorage.getItem("langPref");
       if (savedLang && savedLang !== "en") {
@@ -1194,8 +1187,8 @@
     });
   </script>
 
-<!-- Google Translate Widget Loader -->
-<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <!-- Load Google Translate -->
+  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </body>
 
