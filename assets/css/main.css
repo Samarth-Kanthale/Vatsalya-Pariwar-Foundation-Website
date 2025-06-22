@@ -8272,11 +8272,11 @@ section,
   color: var(--contrast-color);
   margin: 0 6px;
   text-decoration: none;
+  cursor: pointer;
 }
 .language-footer-bar a:hover {
   text-decoration: underline;
 }
-
 
 /*--------------------------------------------------------------
 # Starter Section Section
