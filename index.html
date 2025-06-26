@@ -43,7 +43,7 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="index.html" class="active" data-key="home">Home</a></li>
           <!--<li class="dropdown"><a href="about.html"><span>About</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="about.html">About Us</a></li>
@@ -53,13 +53,13 @@
               <li><a href="campus-facilities.html">Campus &amp; Facilities</a></li>
             </ul>
           </li>-->
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="events.html">Events</a></li>
-          <li><a href="donate.html">Donate</a></li>
-          <li><a href="volunteer.html">Volunteer</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="blogs.html">Blog</a></li>
+          <li><a href="about.html" data-key="about">About</a></li>
+          <li><a href="services.html" data-key="services">Services</a></li>
+          <li><a href="events.html" data-key="events">Events</a></li>
+          <li><a href="donate.html" data-key="donate">Donate</a></li>
+          <li><a href="volunteer.html" data-key="volunteer">Volunteer</a></li>
+          <li><a href="gallery.html" data-key="gallery">Gallery</a></li>
+          <li><a href="blogs.html" data-key="blogs">Blog</a></li>
           <!--<li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="#">Dropdown 1</a></li>
@@ -77,7 +77,7 @@
               <li><a href="#">Dropdown 4</a></li>
             </ul>
           </li>-->
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html" data-key="contact">Contact</a></li>
           <li class="theme-switcher-li">
             <select id="theme-switcher">
               <option value="main">Default</option>
@@ -107,18 +107,18 @@
           <div class="row align-items-center">
             <div class="col-lg-7" data-aos="zoom-out" data-aos-delay="100">
               <div class="hero-content">
-                <h1>Vatsalya: Where Care Feels Like Home.</h1>
-                <p>At Vatsalya - Old Age Home, we are committed to providing abandoned elders a safe home, heartfelt companionship, and the respect they truly deserve.<br/>Together, we create a world where no one grows old alone.</p>
+                <h1 data-key="index-page-hero-title">Vatsalya: Where Care Feels Like Home.</h1>
+                <p data-key="index-page-hero-description">At Vatsalya - Old Age Home, we are committed to providing abandoned elders a safe home, heartfelt companionship, and the respect they truly deserve.<br/>Together, we create a world where no one grows old alone.</p>
                 <div class="cta-buttons">
-                  <a href="donate.html" class="btn-primary">Donate Now</a>
-                  <a href="volunteer.html" class="btn-secondary">Join Our Mission</a>
+                  <a href="donate.html" class="btn-primary" data-key="index-page-donate-button-1">Donate Now</a>
+                  <a href="volunteer.html" class="btn-secondary" data-key="index-page-volunteer-button-1">Join Our Mission</a>
                 </div>
               </div>
             </div>
             <div class="col-lg-5" data-aos="zoom-out" data-aos-delay="200">
               <div class="stats-card">
                 <div class="stats-header">
-                  <h3>Why Choose Us</h3>
+                  <h3 data-key="index-page-hero-stats-why-choose-us">Why Choose Us</h3>
                   <div class="decoration-line"></div>
                 </div>
                 <div class="stats-grid">
@@ -128,7 +128,7 @@
                     </div>
                     <div class="stat-content">
                       <h4>2</h4>
-                      <p>Elder Care Homes</p>
+                      <p data-key="index-page-hero-stats-elder-care-homes">Elder Care Homes</p>
                     </div>
                   </div>
                   <div class="stat-item">
@@ -137,7 +137,7 @@
                     </div>
                     <div class="stat-content">
                       <h4>1,000+</h4>
-                      <p>Lives Touched</p>
+                      <p data-key="index-page-hero-stats-lives-touched">Lives Touched</p>
                     </div>
                   </div>
                   <div class="stat-item">
@@ -146,7 +146,7 @@
                     </div>
                     <div class="stat-content">
                       <h4>500+</h4>
-                      <p>Active Volunteers</p>
+                      <p data-key="index-page-hero-stats-active-volunteers">Active Volunteers</p>
                     </div>
                   </div>
                   <div class="stat-item">
@@ -155,7 +155,7 @@
                     </div>
                     <div class="stat-content">
                       <h4>15+</h4>
-                      <p>Years of Service</p>
+                      <p data-key="index-page-hero-stats-years-of-service">Years of Service</p>
                     </div>
                   </div>
                 </div>
@@ -170,17 +170,17 @@
           <div class="row gy-4">
             <div class="col-md-6 col-xl-4 col-12 ticker-item">
               <span class="date">June 15</span>
-              <span class="title">Godavari River Darshan</span>
+              <span class="title" data-key="event-godavari-river-darshan">Godavari River Darshan</span>
               <!--<a href="#" class="btn-register">Register</a>-->
             </div>
             <div class="col-md-6 col-12 col-xl-4  ticker-item">
               <span class="date">July 5</span>
-              <span class="title">Iskon Temple Visit</span>
+              <span class="title" data-key="event-iskon-temple-visit">Iskon Temple Visit</span>
               <!--<a href="#" class="btn-register">Register</a>-->
             </div>
             <div class="col-md-6 col-12 col-xl-4 ticker-item">
               <span class="date">July 10</span>
-              <span class="title">Birthday</span>
+              <span class="title" data-key="event-birthday">Birthday</span>
               <!--<a href="#" class="btn-register">Register</a>-->
             </div>
           </div>
@@ -196,27 +196,27 @@
 
         <div class="row mb-5">
           <div class="col-lg-6 pe-lg-5" data-aos="fade-right" data-aos-delay="200">
-            <h2 class="display-6 fw-bold mb-4">Restoring Dignity. <span>Rebuilding Lives.</span></h2>
-            <p class="lead mb-4">Vatsalya Pariwar Foundation has dedicated itself to providing abandoned elders a life of dignity, care, and belonging.</p>
+            <h2 class="display-6 fw-bold mb-4" data-key="index-page-about-title">Restoring Dignity. <span>Rebuilding Lives.</span></h2>
+            <p class="lead mb-4" data-key="index-page-about-description">Vatsalya Pariwar Foundation has dedicated itself to providing abandoned elders a life of dignity, care, and belonging.</p>
             <div class="d-flex flex-wrap gap-4 mb-4">
               <div class="stat-box">
                 <span class="stat-number"><span data-purecounter-start="0" data-purecounter-end="25" data-purecounter-duration="1" class="purecounter"></span>+</span>
-                <span class="stat-label">Years</span>
+                <span class="stat-label" data-key="index-page-about-stat-years">Years</span>
               </div>
               <div class="stat-box">
                 <span class="stat-number"><span data-purecounter-start="0" data-purecounter-end="2500" data-purecounter-duration="1" class="purecounter"></span>+</span>
-                <span class="stat-label">Beneficiaries</span>
+                <span class="stat-label" data-key="index-page-about-stat-beneficiaries">Beneficiaries</span>
               </div>
               <div class="stat-box">
                 <span class="stat-number"><span data-purecounter-start="0" data-purecounter-end="125" data-purecounter-duration="1" class="purecounter"></span>+</span>
-                <span class="stat-label">Volunteers</span>
+                <span class="stat-label" data-key="index-page-about-stat-volunteers">Volunteers</span>
               </div>
             </div>
             <div class="d-flex align-items-center mt-4 signature-block">
               <!--<img src="assets/img/misc/signature-1.webp" alt="Principal's Signature" width="120">-->
               <div class="ms-3">
-                <p class="mb-0 fw-bold">Mr. Satish Sonar</p>
-                <p class="mb-0 text-muted">Founder</p>
+                <p class="mb-0 fw-bold" data-key="index-page-founder-name">Mr. Satish Sonar</p>
+                <p class="mb-0 text-muted" data-key="index-page-founder-title">Founder</p>
               </div>
             </div>
           </div>
@@ -238,8 +238,8 @@
               <div class="card-icon">
                 <i class="bi bi-rocket-takeoff"></i>
               </div>
-              <h3>Our Mission</h3>
-              <p>To provide a safe, caring, and inclusive environment for abandoned and destitute elders, addressing not only their basic needs like shelter and healthcare but also nurturing their emotional well-being, restoring their dignity, and helping them rediscover the joy of life.</p>
+              <h3 data-key="index-page-mission">Our Mission</h3>
+              <p data-key="index-page-mission-description">To provide a safe, caring, and inclusive environment for abandoned and destitute elders, addressing not only their basic needs like shelter and healthcare but also nurturing their emotional well-being, restoring their dignity, and helping them rediscover the joy of life.</p>
             </div>
           </div>
           <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
@@ -247,8 +247,8 @@
               <div class="card-icon">
                 <i class="bi bi-eye"></i>
               </div>
-              <h3>Our Vision</h3>
-              <p>We envision a compassionate society where every elder lives with dignity, love, and respect. A world where no elder is left behind, and communities come together to care for their most vulnerable.</p>
+              <h3 data-key="index-page-vision">Our Vision</h3>
+              <p data-key="index-page-vision-description">We envision a compassionate society where every elder lives with dignity, love, and respect. A world where no elder is left behind, and communities come together to care for their most vulnerable.</p>
             </div>
           </div>
           <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
@@ -256,8 +256,8 @@
               <div class="card-icon">
                 <i class="bi bi-star"></i>
               </div>
-              <h3>Our Values</h3>
-              <p>Vatsalya Pariwar Foundation is guided by compassion, dignity, service, community, and integrity. We care for elders with empathy, honor their worth, serve selflessly, build a supportive family beyond blood, and act with honesty and responsibility.</p>
+              <h3 data-key="index-page-values">Our Values</h3>
+              <p data-key="index-page-values-description">Vatsalya Pariwar Foundation is guided by compassion, dignity, service, community, and integrity. We care for elders with empathy, honor their worth, serve selflessly, build a supportive family beyond blood, and act with honesty and responsibility.</p>
             </div>
           </div>
         </div>
@@ -271,18 +271,18 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Our Core Programs</h2>
-        <p>Empowering abandoned elders with care, compassion, and dignity through dedicated, holistic support initiatives.</p>
+        <h2 data-key="index-page-core-programs">Our Core Programs</h2>
+        <p data-key="index-page-core-programs-description">Empowering abandoned elders with care, compassion, and dignity through dedicated, holistic support initiatives.</p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
         <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
           <ul class="program-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-            <li data-filter="*" class="filter-active">All Facilities</li>
-            <li data-filter=".filter-bachelor">Care & Comfort</li>
-            <li data-filter=".filter-master">Engagement & Outreach</li>
-            <li data-filter=".filter-certificate">Daily Living & Nutrition</li>
+            <li data-filter="*" class="filter-active" data-key="index-page-core-programs-all">All Facilities</li>
+            <li data-filter=".filter-bachelor" data-key="index-page-core-programs-care-comfort">Care & Comfort</li>
+            <li data-filter=".filter-master" data-key="index-page-core-programs-engagement-outreach">Engagement & Outreach</li>
+            <li data-filter=".filter-certificate" data-key="index-page-core-programs-daily-living-nutrition">Daily Living & Nutrition</li>
           </ul>
 
           <div class="row g-4 isotope-container">
@@ -297,14 +297,14 @@
                   </div>
                   <div class="col-md-8">
                     <div class="program-content">
-                      <h3>Shelter & Safe Living</h3>
+                      <h3 data-key="index-page-core-programs-care-comfort-shelter">Shelter & Safe Living</h3>
                       <div class="program-highlights">
                         <!--<span><i class="bi bi-clock"></i>Ongoing</span>-->
-                        <span><i class="bi bi-clock"></i>Full Time</span>
-                        <span><i class="bi bi-person-workspace"></i>Residential Support</span>
+                        <span data-key="index-page-core-programs-care-comfort-shelter-hours"><i class="bi bi-clock"></i>Full Time</span>
+                        <span data-key="index-page-core-programs-care-comfort-shelter-support"><i class="bi bi-person-workspace"></i>Residential Support</span>
                       </div>
-                      <p>We offer long-term, loving homes to abandoned elders where they live safely, feel respected, and are embraced by a caring and supportive environment every day.</p>
-                      <a href="#" class="program-btn"><span>Learn More</span> <i class="bi bi-arrow-right"></i></a>
+                      <p data-key="index-page-core-programs-care-comfort-shelter-description">We offer long-term, loving homes to abandoned elders where they live safely, feel respected, and are embraced by a caring and supportive environment every day.</p>
+                      <a href="#" class="program-btn" data-key="index-page-core-programs-care-comfort-shelter-learn-more"><span>Learn More</span> <i class="bi bi-arrow-right"></i></a>
                     </div>
                   </div>
                 </div>
@@ -322,14 +322,14 @@
                   </div>
                   <div class="col-md-8">
                     <div class="program-content">
-                      <h3>Healthcare & Wellness</h3>
+                      <h3 data-key="index-page-core-programs-healthcare">Healthcare & Wellness</h3>
                       <div class="program-highlights">
-                        <span><i class="bi bi-clock"></i>Daily Support</span>
+                        <span  data-key="index-page-core-programs-healthcare-hours"><i class="bi bi-clock"></i>Daily Support</span>
                         <!--<span><i class="bi bi-people-fill"></i> 90 Credits</span>-->
-                        <span><i class="bi bi-person-workspace"></i>Preventive & Curative Care</span>
+                        <span data-key="index-page-core-programs-healthcare-support"><i class="bi bi-person-workspace"></i>Preventive & Curative Care</span>
                       </div>
-                      <p>Our elders receive regular medical checkups, timely treatments, and emotional support to live healthier, fuller lives with the dignity and respect they deserve..</p>
-                      <a href="#" class="program-btn"><span>Learn More</span> <i class="bi bi-arrow-right"></i></a>
+                      <p data-key="index-page-core-programs-healthcare-description">Our elders receive regular medical checkups, timely treatments, and emotional support to live healthier, fuller lives with the dignity and respect they deserve.</p>
+                      <a href="#" class="program-btn" data-key="index-page-core-programs-healthcare-learn-more"><span>Learn More</span> <i class="bi bi-arrow-right"></i></a>
                     </div>
                   </div>
                 </div>
@@ -347,14 +347,14 @@
                   </div>
                   <div class="col-md-8">
                     <div class="program-content">
-                      <h3>Nutrition & Daily Care</h3>
+                      <h3 data-key="index-page-core-programs-daily-living-nutrition-sub">Nutrition & Daily Care</h3>
                       <div class="program-highlights">
-                        <span><i class="bi bi-clock"></i>Year-Round</span>
+                        <span data-key="index-page-core-programs-daily-living-nutrition-sub-hours"><i class="bi bi-clock"></i>Year-Round</span>
                         <!--<span><i class="bi bi-people-fill"></i> 150 Credits</span>-->
-                        <span><i class="bi bi-star"></i>Balanced Meals & Hygiene Assistance</span>
+                        <span data-key="index-page-core-programs-daily-living-nutrition-sub-support"><i class="bi bi-star"></i>Balanced Meals & Hygiene Assistance</span>
                       </div>
-                      <p>Every elder is served nutritious meals and provided with attentive hygiene support, helping them maintain good health and personal dignity in everyday life.</p>
-                      <a href="#" class="program-btn"><span>Learn More</span> <i class="bi bi-arrow-right"></i></a>
+                      <p data-key="index-page-core-programs-daily-living-nutrition-sub-description">Every elder is served nutritious meals and provided with attentive hygiene support, helping them maintain good health and personal dignity in everyday life.</p>
+                      <a href="#" class="program-btn" data-key="index-page-core-programs-daily-living-nutrition-sub-learn-more"><span>Learn More</span> <i class="bi bi-arrow-right"></i></a>
                     </div>
                   </div>
                 </div>
@@ -372,14 +372,14 @@
                   </div>
                   <div class="col-md-8">
                     <div class="program-content">
-                      <h3>Emotional & Spiritual Wellbeing</h3>
+                      <h3 data-key="index-page-core-programs-emotional-spiritual-wellbeing">Emotional & Spiritual Wellbeing</h3>
                       <div class="program-highlights">
-                        <span><i class="bi bi-clock"></i> Weekly Activities</span>
-                        <span><i class="bi bi-people-fill"></i>Group Engagement & Faith Support</span>
+                        <span data-key="index-page-core-programs-emotional-spiritual-wellbeing-hours"><i class="bi bi-clock" ></i> Weekly Activities</span>
+                        <span data-key="index-page-core-programs-emotional-spiritual-wellbeing-support"><i class="bi bi-people-fill"></i>Group Engagement & Faith Support</span>
                         <!--<span><i class="bi bi-calendar3"></i> Spring Only</span>-->
                       </div>
-                      <p>We promote peace and purpose through spiritual guidance, music, and group discussions that bring comfort, connection, and inner healing to each elder.</p>
-                      <a href="#" class="program-btn"><span>Learn More</span> <i class="bi bi-arrow-right"></i></a>
+                      <p data-key="index-page-core-programs-emotional-spiritual-wellbeing-description">We promote peace and purpose through spiritual guidance, music, and group discussions that bring comfort, connection, and inner healing to each elder.</p>
+                      <a href="#" class="program-btn" data-key="index-page-core-programs-emotional-spiritual-wellbeing-learn-more"><span>Learn More</span> <i class="bi bi-arrow-right"></i></a>
                     </div>
                   </div>
                 </div>
@@ -397,14 +397,14 @@
                   </div>
                   <div class="col-md-8">
                     <div class="program-content">
-                      <h3>Community Volunteering & Outreach</h3>
+                      <h3 data-key="index-page-core-programs-community-volunteering-outreach">Community Volunteering & Outreach</h3>
                       <div class="program-highlights">
-                        <span><i class="bi bi-people-fill"></i>Open To All</span>
-                        <span><i class="bi bi-calendar-plus"></i>Scheduled Drives &amp; Events</span>
+                        <span data-key="index-page-core-programs-community-volunteering-outreach-support"><i class="bi bi-people-fill">Open To All</i></span>
+                        <span data-key="index-page-core-programs-community-volunteering-outreach-hours"><i class="bi bi-calendar-plus">Scheduled Drives &amp; Events</i></span>
                         <!--<span><i class="bi bi-calendar3"></i> Fall &amp; Spring</span>-->
                       </div>
-                      <p>Volunteers of all ages can share time, skills, and compassion—creating meaningful relationships that deeply impact the lives of elders and volunteers alike..</p>
-                      <a href="#" class="program-btn"><span>Learn More</span> <i class="bi bi-arrow-right"></i></a>
+                      <p data-key="index-page-core-programs-community-volunteering-outreach-description">Volunteers of all ages can share time, skills, and compassion—creating meaningful relationships that deeply impact the lives of elders and volunteers alike.</p>
+                      <a href="#" class="program-btn" data-key="index-page-core-programs-community-volunteering-outreach-learn-more"><span>Learn More</span> <i class="bi bi-arrow-right"></i></a>
                     </div>
                   </div>
                 </div>
@@ -422,14 +422,14 @@
                   </div>
                   <div class="col-md-8">
                     <div class="program-content">
-                      <h3>Skill Sharing & Elder Engagement</h3>
+                      <h3 data-key="index-page-core-programs-skill-sharing-elder-engagement">Skill Sharing & Elder Engagement</h3>
                       <div class="program-highlights">
-                        <span><i class="bi bi-clock"></i>Flexible</span>
-                        <span><i class="bi bi-people-fill"></i>Creative &amp; Recreational Activities</span>
+                        <span data-key="index-page-core-programs-skill-sharing-elder-engagement-hours"><i class="bi bi-clock"></i>Flexible</span>
+                        <span data-key="index-page-core-programs-skill-sharing-elder-engagement-support"><i class="bi bi-people-fill"></i>Creative &amp; Recreational Activities</span>
                         <!-- <span><i class="bi bi-calendar3"></i> Year-round</span>-->
                       </div>
-                      <p>Through art, storytelling, and simple activities, elders reconnect with their passions, feel valued, and continue to contribute actively within the community.</p>
-                      <a href="#" class="program-btn"><span>Learn More</span> <i class="bi bi-arrow-right"></i></a>
+                      <p data-key="index-page-core-programs-skill-sharing-elder-engagement-description">Through art, storytelling, and simple activities, elders reconnect with their passions, feel valued, and continue to contribute actively within the community.</p>
+                      <a href="#" class="program-btn" data-key="index-page-core-programs-skill-sharing-elder-engagement-learn-more"><span>Learn More</span> <i class="bi bi-arrow-right"></i></a>
                     </div>
                   </div>
                 </div>
@@ -448,8 +448,8 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Life at Vatsalya</h2>
-        <p>At Vatsalya Pariwar Foundation, life is more than shelter—it's a journey of rediscovering joy, community, and purpose. We cultivate a warm, inclusive environment where every elder feels heard, respected, and cherished. From shared meals to festive celebrations, every moment here becomes a memory of hope and healing.</p>
+        <h2 data-key="index-page-students-life-block-title">Life at Vatsalya</h2>
+        <p data-key="index-page-students-life-block-description">At Vatsalya Pariwar Foundation, life is more than shelter—it's a journey of rediscovering joy, community, and purpose. We cultivate a warm, inclusive environment where every elder feels heard, respected, and cherished. From shared meals to festive celebrations, every moment here becomes a memory of hope and healing.</p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -459,8 +459,8 @@
             <div class="students-life-img position-relative">
               <img src="assets/img/elderly_care/Cover.png" class="img-fluid rounded-4 shadow-sm" alt="Vatsalya Services">
               <div class="img-overlay">
-                <h3>Daily Life That Nourishes the Soul</h3>
-                <a href="services.html" class="explore-btn">Explore More <i class="bi bi-arrow-right"></i></a>
+                <h3 data-key="index-page-students-life-block-image-title">Daily Life That Nourishes the Soul</h3>
+                <a href="services.html" class="explore-btn" data-key="index-page-students-life-block-image-title-cta">Explore More <i class="bi bi-arrow-right"></i></a>
               </div>
             </div>
           </div>
@@ -474,8 +474,8 @@
                     <div class="icon-box">
                       <i class="bi bi-people"></i>
                     </div>
-                    <h4>Community Bonds</h4>
-                    <p>Seniors engage in group interactions, storytelling circles, and compassionate peer support that foster belonging and companionship.</p>
+                    <h4 data-key="index-page-students-life-block-activity-community-bonds">Community Bonds</h4>
+                    <p data-key="index-page-students-life-block-activity-community-bonds-description">Seniors engage in group interactions, storytelling circles, and compassionate peer support that foster belonging and companionship.</p>
                   </div>
                 </div>
 
@@ -484,8 +484,8 @@
                     <div class="icon-box">
                       <i class="bi bi-trophy"></i>
                     </div>
-                    <h4>Cultural Celebrations</h4>
-                    <p>From birthdays to traditional festivals, we honor every occasion with warmth and joy, restoring forgotten smiles.</p>
+                    <h4 data-key="index-page-students-life-block-activity-cultural-celebrations">Cultural Celebrations</h4>
+                    <p data-key="index-page-students-life-block-activity-cultural-celebrations-description">From birthdays to traditional festivals, we honor every occasion with warmth and joy, restoring forgotten smiles.</p>
                   </div>
                 </div>
 
@@ -494,8 +494,8 @@
                     <div class="icon-box">
                       <i class="bi bi-music-note-beamed"></i>
                     </div>
-                    <h4>Creative &amp; Theraputic Activities</h4>
-                    <p>Art, music, and wellness programs rejuvenate the mind and body, allowing elders to express themselves freely and stay active.</p>
+                    <h4 data-key="index-page-students-life-block-activity-creative-therapeutic-activities">Creative &amp; Therapeutic Activities</h4>
+                    <p data-key="index-page-students-life-block-activity-creative-therapeutic-activities-description">Art, music, and wellness programs rejuvenate the mind and body, allowing elders to express themselves freely and stay active.</p>
                   </div>
                 </div>
 
@@ -504,14 +504,14 @@
                     <div class="icon-box">
                       <i class="bi bi-globe-americas"></i>
                     </div>
-                    <h4>Connection Beyond Walls</h4>
-                    <p>We regularly host volunteer visits, intergenerational exchange programs, and outings to ensure our elders stay connected with the world around them.</p>
+                    <h4 data-key="index-page-students-life-block-activity-connection-beyond-walls">Connection Beyond Walls</h4>
+                    <p data-key="index-page-students-life-block-activity-connection-beyond-walls-description">We regularly host volunteer visits, intergenerational exchange programs, and outings to ensure our elders stay connected with the world around them.</p>
                   </div>
                 </div>
               </div>
 
               <div class="students-life-cta" data-aos="fade-up" data-aos-delay="600">
-                <a href="services.html" class="btn btn-primary">Explore Life at Vatsalya</a>
+                <a href="services.html" class="btn btn-primary" data-key="index-page-students-life-block-cta">Explore Life at Vatsalya</a>
               </div>
             </div>
           </div>
@@ -526,8 +526,8 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Testimonials</h2>
-        <p>Voices from the Heart of Vatsalya</p>
+        <h2 data-key="index-page-testimonials-title">Testimonials</h2>
+        <p data-key="index-page-testimonials-subtitle">Voices from the Heart of Vatsalya</p>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -539,14 +539,14 @@
               <div class="quote-pattern">
                 <i class="bi bi-quote"></i>
               </div>
-              <p>Living at Vatsalya Pariwar has brought peace and comfort back into my life. For the first time in years, I feel safe, heard, and cared for like family.</p>
+              <p data-key="index-page-testimonials-item-1">Living at Vatsalya Pariwar has brought peace and comfort back into my life. For the first time in years, I feel safe, heard, and cared for like family.</p>
               <div class="client-info">
                 <div class="client-image">
                   <!--<img src="assets/img/person/person-f-7.webp" alt="Client">-->
                 </div>
                 <div class="client-details">
-                  <h3>Savitabai Deshmukh</h3>
-                  <span class="position">Resident Elder</span>
+                  <h3 data-key="index-page-testimonials-item-1-client-name">Savitabai Deshmukh</h3>
+                  <span class="position" data-key="index-page-testimonials-item-1-client-position">Resident Elder</span>
                 </div>
               </div>
             </div>
@@ -557,14 +557,14 @@
               <div class="quote-pattern">
                 <i class="bi bi-quote"></i>
               </div>
-              <p>Supporting Vatsalya’s work has been deeply rewarding. Knowing that my small contribution helps abandoned elders find love and dignity gives me real purpose.</p>
+              <p data-key="index-page-testimonials-item-2">Supporting Vatsalya’s work has been deeply rewarding. Knowing that my small contribution helps abandoned elders find love and dignity gives me real purpose.</p>
               <div class="client-info">
                 <div class="client-image">
                   <!--<img src="assets/img/person/person-m-7.webp" alt="Client">-->
                 </div>
                 <div class="client-details">
-                  <h3>Rajiv Patil</h3>
-                  <span class="position">Monthly Donor</span>
+                  <h3 data-key="index-page-testimonials-item-2-client-name">Rajiv Patil</h3>
+                  <span class="position" data-key="index-page-testimonials-item-2-client-position">Monthly Donor</span>
                 </div>
               </div>
             </div>
@@ -575,14 +575,14 @@
               <div class="quote-pattern">
                 <i class="bi bi-quote"></i>
               </div>
-              <p>As a volunteer, I’ve seen how Vatsalya creates not just shelter, but a true home filled with affection, respect, and a sense of belonging.</p>
+              <p data-key="index-page-testimonials-item-3">As a volunteer, I’ve seen how Vatsalya creates not just shelter, but a true home filled with affection, respect, and a sense of belonging.</p>
               <div class="client-info">
                 <div class="client-image">
                   <!--<img src="assets/img/person/person-f-8.webp" alt="Client">-->
                 </div>
                 <div class="client-details">
-                  <h3>Meenal Joshi</h3>
-                  <span class="position">Volunteer</span>
+                  <h3 data-key="index-page-testimonials-item-3-client-name">Meenal Joshi</h3>
+                  <span class="position" data-key="index-page-testimonials-item-3-client-position">Volunteer</span>
                 </div>
               </div>
             </div>
@@ -593,14 +593,14 @@
               <div class="quote-pattern">
                 <i class="bi bi-quote"></i>
               </div>
-              <p>The team at Vatsalya has become my extended family. Their compassion and support gave me the strength to start living again.</p>
+              <p data-key="index-page-testimonials-item-4">The team at Vatsalya has become my extended family. Their compassion and support gave me the strength to start living again.</p>
               <div class="client-info">
                 <div class="client-image">
                   <!--<img src="assets/img/person/person-m-8.webp" alt="Client">-->
                 </div>
                 <div class="client-details">
-                  <h3>Keshav Rao</h3>
-                  <span class="position">Resident Elder</span>
+                  <h3 data-key="index-page-testimonials-item-4-client-name">Keshav Rao</h3>
+                  <span class="position" data-key="index-page-testimonials-item-4-client-position">Resident Elder</span>
                 </div>
               </div>
             </div>
@@ -611,14 +611,14 @@
               <div class="quote-pattern">
                 <i class="bi bi-quote"></i>
               </div>
-              <p>I feel proud to associate with an organization that uplifts forgotten elders and reminds us of our shared responsibility to care for our seniors.</p>
+              <p data-key="index-page-testimonials-item-5">I feel proud to associate with an organization that uplifts forgotten elders and reminds us of our shared responsibility to care for our seniors.</p>
               <div class="client-info">
                 <div class="client-image">
                   <!--<img src="assets/img/person/person-f-9.webp" alt="Client">-->
                 </div>
                 <div class="client-details">
-                  <h3>Dr. Anjali More</h3>
-                  <span class="position">Philanthropist & Supporter</span>
+                  <h3 data-key="index-page-testimonials-item-5-client-name">Dr. Anjali More</h3>
+                  <span class="position" data-key="index-page-testimonials-item-5-client-position">Philanthropist & Supporter</span>
                 </div>
               </div>
             </div>
@@ -629,14 +629,14 @@
               <div class="quote-pattern">
                 <i class="bi bi-quote"></i>
               </div>
-              <p>Vatsalya Pariwar isn’t just a foundation—it’s a movement. A place where love is unconditional, and every elder is valued beyond words.</p>
+              <p data-key="index-page-testimonials-item-6">Vatsalya Pariwar isn’t just a foundation—it’s a movement. A place where love is unconditional, and every elder is valued beyond words.</p>
               <div class="client-info">
                 <div class="client-image">
                   <!--<img src="assets/img/person/person-m-13.webp" alt="Client">-->
                 </div>
                 <div class="client-details">
-                  <h3>Sneha Kulkarni</h3>
-                  <span class="position">Event Coordinator</span>
+                  <h3 data-key="index-page-testimonials-item-6-client-name">Sneha Kulkarni</h3>
+                  <span class="position" data-key="index-page-testimonials-item-6-client-position">Event Coordinator</span>
                 </div>
               </div>
             </div>
@@ -656,11 +656,11 @@
         <div class="row">
           <div class="col-lg-6">
             <div class="stats-overview" data-aos="fade-right" data-aos-delay="200">
-              <h2 class="stats-title">A Legacy of Compassion and Care for Over 25 Years</h2>
-              <p class="stats-description">For more than two decades, Vatsalya Pariwar Foundation has been a sanctuary for abandoned elders—providing not just shelter, but love, dignity, and emotional support. We are dedicated to creating a world where every elder feels safe, valued, and at home.<br/>With compassion as our foundation and community at our heart, we continue to touch lives, one elder at a time.</p>
+              <h2 class="stats-title" data-key="index-page-main-stats-title">A Legacy of Compassion and Care for Over 25 Years</h2>
+              <p class="stats-description" data-key="index-page-main-stats-description">For more than two decades, Vatsalya Pariwar Foundation has been a sanctuary for abandoned elders—providing not just shelter, but love, dignity, and emotional support. We are dedicated to creating a world where every elder feels safe, valued, and at home.<br/>With compassion as our foundation and community at our heart, we continue to touch lives, one elder at a time.</p>
               <div class="stats-cta">
-                <a href="gallery.html" class="btn btn-primary">Discover Our Journey</a>
-                <a href="contact.html" class="btn btn-outline">Visit Our Homes</a>
+                <a href="gallery.html" class="btn btn-primary" data-key="index-page-main-stats-cta-1">Discover Our Journey</a>
+                <a href="contact.html" class="btn btn-outline" data-key="index-page-main-stats-cta-2">Visit Our Homes</a>
               </div>
             </div>
           </div>
@@ -674,7 +674,7 @@
                   <div class="stats-number">
                     <span data-purecounter-start="0" data-purecounter-end="400" data-purecounter-duration="1" class="purecounter"></span>+
                   </div>
-                  <div class="stats-label">Elders Rehabilitated</div>
+                  <div class="stats-label" data-key="index-page-main-stats-elders-rehabilitated">Elders Rehabilitated</div>
                 </div>
               </div>
               <div class="col-md-6">
@@ -685,7 +685,7 @@
                   <div class="stats-number">
                     <span data-purecounter-start="0" data-purecounter-end="1" data-purecounter-duration="1" class="purecounter"></span>:5
                   </div>
-                  <div class="stats-label">Caregiver-to-Elder Ratio</div>
+                  <div class="stats-label" data-key="index-page-main-stats-caregiver-to-elder-ratio">Caregiver-to-Elder Ratio</div>
                 </div>
               </div>
               <div class="col-md-6">
@@ -696,7 +696,7 @@
                   <div class="stats-number">
                     <span data-purecounter-start="0" data-purecounter-end="2" data-purecounter-duration="1" class="purecounter"></span>
                   </div>
-                  <div class="stats-label">Residential Homes</div>
+                  <div class="stats-label" data-key="index-page-main-stats-residential-homes">Residential Homes</div>
                 </div>
               </div>
               <div class="col-md-6">
@@ -706,7 +706,7 @@
                   </div>
                   <div class="stats-number">₹<span data-purecounter-start="0" data-purecounter-end="10" data-purecounter-duration="1" class="purecounter"></span>L
                   </div>
-                  <div class="stats-label">Donations Mobilized</div>
+                  <div class="stats-label" data-key="index-page-main-stats-donations-mobilized">Donations Mobilized</div>
                 </div>
               </div>
             </div>
@@ -758,8 +758,8 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Stories of Dignity, Hope & Healing</h2>
-        <p>At Vatsalya Pariwar Foundation, each day unfolds a new chapter—woven with compassion, courage, and the quiet strength of our elders. Through heartfelt care and shared humanity, we witness the beauty of second chances.</p>
+        <h2 data-key="index-page-recent-news-title">Stories of Dignity, Hope & Healing</h2>
+        <p data-key="index-page-recent-news-description">At Vatsalya Pariwar Foundation, each day unfolds a new chapter—woven with compassion, courage, and the quiet strength of our elders. Through heartfelt care and shared humanity, we witness the beauty of second chances.</p>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -773,17 +773,17 @@
                 <img src="assets/img/elderly_care/Blog1.png" alt="Blog1" class="img-fluid">
               </div>
 
-              <p class="post-category">A New Chapter Begins</p>
+              <p class="post-category" data-key="index-page-recent-news-item-1-category">A New Chapter Begins</p>
 
-              <h2 class="title">
+              <h2 class="title" data-key="index-page-recent-news-item-1-title">
                 <a href="#">"I thought I was forgotten—until Vatsalya found me."<br/>After years of loneliness, Rekha tai now begins her mornings with companionship, comfort, and a renewed sense of purpose.</a>
               </h2>
 
               <div class="d-flex align-items-center">
                 <!--<img src="assets/img/person/person-f-12.webp" alt="" class="img-fluid post-author-img flex-shrink-0">-->
                 <div class="post-meta">
-                  <p class="post-author">Rekha tai</p>
-                  <p class="post-date">
+                  <p class="post-author" data-key="index-page-recent-news-item-1-author">Rekha tai</p>
+                  <p class="post-date" data-key="index-page-recent-news-item-1-date">
                     <time datetime="2022-01-01">Resident since March 2024</time>
                   </p>
                 </div>
@@ -799,17 +799,17 @@
                 <img src="assets/img/elderly_care/Blog2 (2).png" alt="Blog2" class="img-fluid">
               </div>
 
-              <p class="post-category">A Festival of Togetherness</p>
+              <p class="post-category" data-key="index-page-recent-news-item-2-category">A Festival of Togetherness</p>
 
-              <h2 class="title">
+              <h2 class="title" data-key="index-page-recent-news-item-2-title">
                 <a href="#">"It felt like family again."<br/>This Diwali, the home came alive with over 70 elders lighting diyas, exchanging sweets, and celebrating the joy of belonging.</a>
               </h2>
 
               <div class="d-flex align-items-center">
                 <!--<img src="assets/img/person/person-f-13.webp" alt="" class="img-fluid post-author-img flex-shrink-0">-->
                 <div class="post-meta">
-                  <p class="post-author">Moments from Vatsalya’s Diwali Utsav</p>
-                  <p class="post-date">
+                  <p class="post-author" data-key="index-page-recent-news-item-2-author">Moments from Vatsalya’s Diwali Utsav</p>
+                  <p class="post-date" data-key="index-page-recent-news-item-2-date">
                     <time datetime="2022-01-01">October, 2024</time>
                   </p>
                 </div>
@@ -825,17 +825,17 @@
                 <img src="assets/img/elderly_care/Blog3.png" alt="Blog3" class="img-fluid">
               </div>
 
-              <p class="post-category">Healing Through Care</p>
+              <p class="post-category" data-key="index-page-recent-news-item-3-category">Healing Through Care</p>
 
-              <h2 class="title">
+              <h2 class="title" data-key="index-page-recent-news-item-3-title">
                 <a href="#">"The warmth of a touch means more than medicine."<br/>With consistent checkups and genuine emotional support, each elder is embraced with dignity and healing.</a>
               </h2>
 
               <div class="d-flex align-items-center">
                 <!--<img src="assets/img/person/person-m-10.webp" alt="" class="img-fluid post-author-img flex-shrink-0">-->
                 <div class="post-meta">
-                  <p class="post-author">Dr. Anjali Joshi, Volunteer</p>
-                  <p class="post-date">
+                  <p class="post-author" data-key="index-page-recent-news-item-3-author">Dr. Anjali Joshi, Volunteer</p>
+                  <p class="post-date" data-key="index-page-recent-news-item-3-date">
                     <time datetime="2022-01-01">Wellness Initiative January, 2025</time>
                   </p>
                 </div>
@@ -855,8 +855,8 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Moments That Matter</h2>
-        <p>Every gathering at Vatsalya Foundation Pariwar is more than just an event — it’s a bridge between generations, a celebration of life, and a reaffirmation of dignity for our elders. Our calendar is filled with heartfelt initiatives that bring joy, community, and purpose.</p>
+        <h2 data-key="index-page-events-title">Moments That Matter</h2>
+        <p data-key="index-page-events-description">Every gathering at Vatsalya Foundation Pariwar is more than just an event — it’s a bridge between generations, a celebration of life, and a reaffirmation of dignity for our elders. Our calendar is filled with heartfelt initiatives that bring joy, community, and purpose.</p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -897,26 +897,26 @@
           <div class="col-lg-6">
             <div class="event-card">
               <div class="event-date">
-                <span class="month">July</span>
-                <span class="day">15</span>
-                <span class="year">2025</span>
+                <span class="month" data-key="index-page-events-item-1-month">July</span>
+                <span class="day" data-key="index-page-events-item-1-day">15</span>
+                <span class="year" data-key="index-page-events-item-1-year">2025</span>
               </div>
               <div class="event-content">
-                <div class="event-tag musical">Memories</div>
-                <h3>Saanjh Ki Yaadein – Monthly Reminiscence Evenings</h3>
-                <p>A soulful evening where residents relive old memories through music, storytelling, and shared nostalgia.</p>
+                <div class="event-tag musical" data-key="index-page-events-item-1-category">Memories</div>
+                <h3 data-key="index-page-events-item-1-title">Saanjh Ki Yaadein – Monthly Reminiscence Evenings</h3>
+                <p data-key="index-page-events-item-1-description">A soulful evening where residents relive old memories through music, storytelling, and shared nostalgia.</p>
                 <div class="event-meta">
                   <div class="meta-item">
                     <i class="bi bi-clock"></i>
-                    <span>6:00 PM – 8:00 PM </span>
+                    <span data-key="index-page-events-item-1-time">6:00 PM – 8:00 PM </span>
                   </div>
                   <div class="meta-item">
                     <i class="bi bi-geo-alt"></i>
-                    <span>Vatsalya Courtyard</span>
+                    <span data-key="index-page-events-item-1-location">Vatsalya Courtyard</span>
                   </div>
                 </div>
                 <div class="event-actions">
-                  <a href="events.html" class="btn-learn-more">Learn More</a>
+                  <a href="events.html" class="btn-learn-more" data-key="index-page-events-item-1-learn-more">Learn More</a>
                   <!--<a href="#" class="btn-calendar"><i class="bi bi-calendar-plus"></i> Add to Calendar</a>-->
                 </div>
               </div>
@@ -926,26 +926,26 @@
           <div class="col-lg-6">
             <div class="event-card">
               <div class="event-date">
-                <span class="month">August</span>
-                <span class="day">10</span>
-                <span class="year">2025</span>
+                <span class="month" data-key="index-page-events-item-2-month">August</span>
+                <span class="day" data-key="index-page-events-item-2-day">10</span>
+                <span class="year" data-key="index-page-events-item-2-year">2025</span>
               </div>
               <div class="event-content">
-                <div class="event-tag birthday">Birthday</div>
-                <h3>Birthday & Festival Celebrations</h3>
-                <p>No one grows old alone here. Each birthday and festival is celebrated with love, lights, laughter — and cake!</p>
+                <div class="event-tag birthday" data-key="index-page-events-item-2-category">Birthday</div>
+                <h3 data-key="index-page-events-item-2-title">Birthday & Festival Celebrations</h3>
+                <p data-key="index-page-events-item-2-description">No one grows old alone here. Each birthday and festival is celebrated with love, lights, laughter — and cake!</p>
                 <div class="event-meta">
                   <div class="meta-item">
                     <i class="bi bi-clock"></i>
-                    <span>08:30 PM - 10:00 PM</span>
+                    <span data-key="index-page-events-item-2-time">08:30 PM - 10:00 PM</span>
                   </div>
                   <div class="meta-item">
                     <i class="bi bi-geo-alt"></i>
-                    <span>Vatsalya Home Campus</span>
+                    <span data-key="index-page-events-item-2-location">Vatsalya Home Campus</span>
                   </div>
                 </div>
                 <div class="event-actions">
-                  <a href="events.html" class="btn-learn-more">Learn More</a>
+                  <a href="events.html" class="btn-learn-more" data-key="index-page-events-item-2-learn-more">Learn More</a>
                   <!--<a href="#" class="btn-calendar"><i class="bi bi-calendar-plus"></i> Add to Calendar</a>-->
                 </div>
               </div>
@@ -955,26 +955,26 @@
           <div class="col-lg-6">
             <div class="event-card">
               <div class="event-date">
-                <span class="month">August</span>
-                <span class="day">22</span>
-                <span class="year">2025</span>
+                <span class="month" data-key="index-page-events-item-3-month">August</span>
+                <span class="day" data-key="index-page-events-item-3-day">22</span>
+                <span class="year" data-key="index-page-events-item-3-year">2025</span>
               </div>
               <div class="event-content">
-                <div class="event-tag volunteer">Volunteers</div>
-                <h3>Volunteer Saturdays – Serve with Your Heart</h3>
-                <p>Open days for individuals and families to spend quality time with our elders through art, games, and conversations.</p>
+                <div class="event-tag volunteer" data-key="index-page-events-item-3-category">Volunteers</div>
+                <h3 data-key="index-page-events-item-3-title">Volunteer Saturdays – Serve with Your Heart</h3>
+                <p data-key="index-page-events-item-3-description">Open days for individuals and families to spend quality time with our elders through art, games, and conversations.</p>
                 <div class="event-meta">
                   <div class="meta-item">
                     <i class="bi bi-clock"></i>
-                    <span>9:00 AM – 1:00 PM</span>
+                    <span data-key="index-page-events-item-3-time">9:00 AM – 1:00 PM</span>
                   </div>
                   <div class="meta-item">
                     <i class="bi bi-geo-alt"></i>
-                    <span>Community Interaction Hall</span>
+                    <span data-key="index-page-events-item-3-location">Community Interaction Hall</span>
                   </div>
                 </div>
                 <div class="event-actions">
-                  <a href="events.html" class="btn-learn-more">Learn More</a>
+                  <a href="events.html" class="btn-learn-more" data-key="index-page-events-item-3-learn-more">Learn More</a>
                   <!--<a href="#" class="btn-calendar"><i class="bi bi-calendar-plus"></i> Add to Calendar</a>-->
                 </div>
               </div>
@@ -984,26 +984,26 @@
           <div class="col-lg-6">
             <div class="event-card">
               <div class="event-date">
-                <span class="month">September</span>
-                <span class="day">8</span>
-                <span class="year">2025</span>
+                <span class="month" data-key="index-page-events-item-4-month">September</span>
+                <span class="day" data-key="index-page-events-item-4-day">8</span>
+                <span class="year" data-key="index-page-events-item-4-year">2025</span>
               </div>
               <div class="event-content">
-                <div class="event-tag outings">Outings</div>
-                <h3>Outreach Drives – Compassion in Action</h3>
-                <p>Whether it's warm blankets in winter or health checkups, our outreach initiatives extend care beyond our walls.</p>
+                <div class="event-tag outings" data-key="index-page-events-item-4-category">Outings</div>
+                <h3 data-key="index-page-events-item-4-title">Outreach Drives – Compassion in Action</h3>
+                <p data-key="index-page-events-item-4-description">Whether it's warm blankets in winter or health checkups, our outreach initiatives extend care beyond our walls.</p>
                 <div class="event-meta">
                   <div class="meta-item">
                     <i class="bi bi-clock"></i>
-                    <span>Timings Vary</span>
+                    <span data-key="index-page-events-item-4-time">Timings Vary</span>
                   </div>
                   <div class="meta-item">
                     <i class="bi bi-geo-alt"></i>
-                    <span>Across Nashik & Surrounding Villages</span>
+                    <span data-key="index-page-events-item-4-location">Across Nashik & Surrounding Villages</span>
                   </div>
                 </div>
                 <div class="event-actions">
-                  <a href="events.html" class="btn-learn-more">Learn More</a>
+                  <a href="events.html" class="btn-learn-more" data-key="index-page-events-item-4-learn-more">Learn More</a>
                   <!--<a href="#" class="btn-calendar"><i class="bi bi-calendar-plus"></i> Add to Calendar</a>-->
                 </div>
               </div>
@@ -1013,7 +1013,7 @@
         </div>
 
         <div class="text-center mt-5">
-          <a href="events.html" class="btn-view-all">View All Events</a>
+          <a href="events.html" class="btn-view-all" data-key="index-page-events-view-all">View All Events</a>
         </div>
 
       </div>
@@ -1028,12 +1028,12 @@
       <div class="row gy-4">
         <div class="col-lg-4 col-md-6 footer-about">
           <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename">Vatsalya Old Age Home</span>
+            <span class="sitename" data-key="sitename">Vatsalya Old Age Home</span>
           </a>
           <div class="footer-contact pt-3">
-            <p>Dave Farsan, opposite Hirawadi Road,<br />Damodar Nagar, Panchavati,<br/> Nashik, Maharashtra 422003</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>07387386333</span></p>
-            <p><strong>Email:</strong> <span>vatsalyavruddhashram@gmail.com</span></p>
+            <p data-key="address">Dave Farsan, opposite Hirawadi Road,<br />Damodar Nagar, Panchavati,<br/> Nashik, Maharashtra 422003</p>
+            <p class="mt-3"><strong data-key="phone">Phone:</strong> <span>07387386333</span></p>
+            <p><strong data-key="email">Email:</strong> <span>vatsalyavruddhashram@gmail.com</span></p>
           </div>
           <div class="social-links d-flex mt-4">
             <a href="https://www.facebook.com/vatsalya.vruddhashram"><i class="bi bi-facebook"></i></a>
@@ -1042,35 +1042,35 @@
         </div>
 
         <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Useful Links</h4>
+          <h4 data-key="useful-links">Useful Links</h4>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="about.html">About us</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="#">Terms of service</a></li>
-            <li><a href="#">Privacy policy</a></li>
+            <li><a href="#" data-key="home">Home</a></li>
+            <li><a href="about.html" data-key="about">About us</a></li>
+            <li><a href="services.html" data-key="services">Services</a></li>
+            <li><a href="#" data-key="terms">Terms of service</a></li>
+            <li><a href="#" data-key="privacy">Privacy policy</a></li>
           </ul>
         </div>
 
         <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Our Services</h4>
+          <h4 data-key="our-services">Our Services</h4>
           <ul>
-            <li><a href="services.html">Medical Support</a></li>
-            <li><a href="services.html">Healthy Vegetarian Meals</a></li>
-            <li><a href="services.html">Hygenic Shelter</a></li>
-            <li><a href="services.html">Activities, Art and Festival Fun</a></li>
-            <li><a href="services.html">Yoga Meditation & Wellness Programs</a></li>
+            <li><a href="services.html" data-key="medical-support">Medical Support</a></li>
+            <li><a href="services.html" data-key="healthy-meals">Healthy Vegetarian Meals</a></li>
+            <li><a href="services.html" data-key="hygienic-shelter">Hygenic Shelter</a></li>
+            <li><a href="services.html" data-key="activities-art-festival">Activities, Art and Festival Fun</a></li>
+            <li><a href="services.html" data-key="yoga-meditation">Yoga Meditation & Wellness Programs</a></li>
           </ul>
         </div>
 
         <div class="col-lg-2 col-md-3 footer-links">
           <ul>
-            <li><a href="blogs.html"><h4>Blogs</h4></a></li>
-            <li><a href="donate.html"><h4>Donate</h4></a></li>
-            <li><a href="volunteer.html"><h4>Volunteer</h4></a></li>
-            <li><a href="events.html"><h4>Events</h4></a></li>
-            <li><a href="gallery.html"><h4>Gallery</h4></a></li>
-            <li><a href="contact.html"><h4>Contact Us</h4></a></li>
+            <li><a href="blogs.html" data-key="blogs"><h4>Blogs</h4></a></li>
+            <li><a href="donate.html" data-key="donate"><h4>Donate</h4></a></li>
+            <li><a href="volunteer.html" data-key="volunteer"><h4>Volunteer</h4></a></li>
+            <li><a href="events.html" data-key="events"><h4>Events</h4></a></li>
+            <li><a href="gallery.html" data-key="gallery"><h4>Gallery</h4></a></li>
+            <li><a href="contact.html" data-key="contact"><h4>Contact Us</h4></a></li>
           </ul>
         </div>
 
@@ -1091,13 +1091,17 @@
     <div class="container copyright text-center mt-4">
       <p>© <span>Copyright</span> <strong class="px-1 sitename">Vatsalya Old Age Home Website</strong> <span>All Rights Reserved</span></p>
       <div class="credits">
-        Designed by <a href="https://beartindia.com/">Beart India Software Solutions</a>
+        Designed by <a href="https://beartindia.com/"><span>Beart India Software Solutions</span></a>
       </div>
     </div>
 
-    <!-- Google Translate Language Selector -->
-    <div id="google_translate_element_footer" class="language-dropdown-footer"></div>
-
+    <div id="google_translate_element_footer" class="language-dropdown-footer">
+      <select id="language-select">
+        <option value="en">English</option>
+        <option value="mr">Marathi</option>
+        <option value="hi">Hindi</option>
+      </select>
+    </div>
   </footer>
 
   <!-- Scroll Top -->
@@ -1120,16 +1124,36 @@
   <script src="assets/js/main.js"></script>
   <script src="assets/js/theme-switcher.js"></script>
 
-  <script type="text/javascript">
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({
-        pageLanguage: 'en',
-        includedLanguages: 'en,hi,mr,bn,ta,gu,kn,ml,te,pa',
-        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-      }, 'google_translate_element_footer');
+  <script>
+    function loadLanguage(langCode) {
+      fetch(`lang/lang-${langCode}.json`)
+        .then(response => response.json())
+        .then(data => {
+          document.querySelectorAll('[data-key]').forEach(element => {
+            const key = element.getAttribute('data-key');
+            if (data[key]) {
+              element.innerHTML = data[key];
+            }
+          });
+          localStorage.setItem("preferredLang", langCode);
+        })
+        .catch(error => console.error("Translation load error:", error));
     }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const langSelect = document.getElementById("language-select");
+      const savedLang = localStorage.getItem("preferredLang") || "en";
+      
+      loadLanguage(savedLang);
+      langSelect.value = savedLang;
+
+      langSelect.addEventListener("change", () => {
+        const selectedLang = langSelect.value;
+        loadLanguage(selectedLang);
+      });
+    });
   </script>
-  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 </body>
 
 </html>
