@@ -41,7 +41,7 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html" data-key="home">Home</a></li>
           <!--<li class="dropdown"><a href="about.html"><span>About</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="about.html">About Us</a></li>
@@ -51,14 +51,14 @@
               <li><a href="campus-facilities.html">Campus &amp; Facilities</a></li>
             </ul>
           </li>-->
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="events.html">Events</a></li>
-          <li><a href="#"  class="active">Donate</a></li>
-          <li><a href="volunteer.html">Volunteer</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="blogs.html">Blog</a></li>
-          
+          <li><a href="about.html" data-key="about">About</a></li>
+          <li><a href="services.html" data-key="services">Services</a></li>
+          <li><a href="events.html" data-key="events">Events</a></li>
+          <li><a href="#"  class="active" data-key="donate">Donate</a></li>
+          <li><a href="volunteer.html" data-key="volunteer">Volunteer</a></li>
+          <li><a href="gallery.html" data-key="gallery">Gallery</a></li>
+          <li><a href="blogs.html" data-key="blogs">Blog</a></li>
+
           <!--<li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="#">Dropdown 1</a></li>
@@ -76,7 +76,7 @@
               <li><a href="#">Dropdown 4</a></li>
             </ul>
           </li>-->
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html" data-key="contact">Contact</a></li>
           <li class="theme-switcher-li">
             <select id="theme-switcher">
               <option value="main">Default</option>
@@ -97,12 +97,12 @@
     <!-- Page Title -->
     <div class="page-title dark-background" style="background-image: url(assets/img/education/showcase-1.webp);">
       <div class="container position-relative">
-        <h1>Donate</h1>
-        <p>Vatsalya Old Age Homes</p>
+        <h1 data-key="donate">Donate</h1>
+        <p data-key="sitename">Vatsalya Old Age Home</p>
         <nav class="breadcrumbs">
           <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">Donate</li>
+            <li><a href="index.html" data-key="home">Home</a></li>
+            <li class="current" data-key="donate">Donate</li>
           </ol>
         </nav>
       </div>
@@ -114,17 +114,17 @@
         <div class="row gy-5 g-lg-5">
           <div class="col-lg-6">
             <div class="admissions-info" data-aos="fade-up">
-              <h2>Every Rupee Tells An Elder <br/>That They Matter</h2>
-              <p>We don’t just need your help. They do.</p>
+              <h2 data-key="donate-page-donation-of-rupee-message">Every Rupee Tells An Elder <br/>That They Matter</h2>
+              <p data-key="donate-page-need-help-message">We don’t just need your help. They do.</p>
 
               <div class="admissions-steps mt-5">
-                <h3>How can you help</h3>
+                <h3 data-key="donate-page-how-help">How can you help</h3>
                 <div class="steps-wrapper mt-4">
                   <div class="step-item" data-aos="fade-up" data-aos-delay="100">
                     <div class="step-number">1</div>
                     <div class="step-content">
                       <h4>₹3100</h4>
-                      <p>One Time Annadanam</p>
+                      <p data-key="donate-page-one-time-annadanam">One Time Annadanam</p>
                     </div>
                   </div>
 
@@ -132,7 +132,7 @@
                     <div class="step-number">2</div>
                     <div class="step-content">
                       <h4>₹6100</h4>
-                      <p>Two Time Annadanam</p>
+                      <p data-key="donate-page-two-time-annadanam">Two Time Annadanam</p>
                     </div>
                   </div>
 
@@ -140,15 +140,15 @@
                     <div class="step-number">3</div>
                     <div class="step-content">
                       <h4>₹1800</h4>
-                      <p>One Time Breakfast</p>
+                      <p data-key="donate-page-one-time-breakfast">One Time Breakfast</p>
                     </div>
                   </div>
 
                   <div class="step-item" data-aos="fade-up" data-aos-delay="400">
                     <div class="step-number">4</div>
                     <div class="step-content">
-                      <h4>9999</h4>
-                      <p>Whole Day Annadanam</p>
+                      <h4>₹9999</h4>
+                      <p data-key="donate-page-whole-day-annadanam">Whole Day Annadanam</p>
                     </div>
                   </div>
 
@@ -156,7 +156,7 @@
                     <div class="step-number">5</div>
                     <div class="step-content">
                       <h4>₹3100</h4>
-                      <p>Every Month's Annadanam</p>
+                      <p data-key="donate-page-every-month-annadanam">Every Month's Annadanam</p>
                     </div>
                   </div>
 
@@ -186,15 +186,15 @@
               </div>-->
               <div class="col-lg-6">
                 <div class="admissions-requirements" data-aos="fade-up" style="width: fit-content;">
-                  <h3>Bank Details</h3>
+                  <h3 data-key="donate-page-bank-details-1">Bank Details</h3>
                   <div class="requirements-list mt-4">
                     <div class="requirement-item" data-aos="fade-up" data-aos-delay="100">
                       <div class="icon-box">
                         <i class="bi bi-mortarboard-fill"></i>
                       </div>
                       <div>
-                        <h4>Account name</h4>
-                        <p>Vatsalya Parivar Foundation</p>
+                        <h4 data-key="donate-page-bank-details-1-account-name">Account name</h4>
+                        <p data-key="donate-page-bank-details-1-account-name-value">Vatsalya Parivar Foundation</p>
                       </div>
                     </div>
 
@@ -203,8 +203,8 @@
                         <i class="bi bi-file-earmark-text"></i>
                       </div>
                       <div>
-                        <h4>Bank</h4>
-                        <p>HDFC Bank</p>
+                        <h4 data-key="donate-page-bank-details-1-bank">Bank</h4>
+                        <p data-key="donate-page-bank-details-1-bank-value">HDFC Bank</p>
                       </div>
                     </div>
 
@@ -213,8 +213,8 @@
                         <i class="bi bi-journal-richtext"></i>
                       </div>
                       <div>
-                        <h4>Account Number</h4>
-                        <p>50200071436679</p>
+                        <h4 data-key="donate-page-bank-details-1-account-number">Account Number</h4>
+                        <p data-key="donate-page-bank-details-1-account-number-value">50200071436679</p>
                       </div>
                     </div>
 
@@ -223,8 +223,8 @@
                         <i class="bi bi-graph-up"></i>
                       </div>
                       <div>
-                        <h4>IFSC Code</h4>
-                        <p>HDFC0000064</p>
+                        <h4 data-key="donate-page-bank-details-1-ifsc-code">IFSC Code</h4>
+                        <p data-key="donate-page-bank-details-1-ifsc-code-value">HDFC0000064</p>
                       </div>
                     </div>
 
@@ -233,8 +233,8 @@
                         <i class="bi bi-graph-up"></i>
                       </div>
                       <div>
-                        <h4>Branch</h4>
-                        <p>Thattenagar Nashik</p>
+                        <h4 data-key="donate-page-bank-details-1-branch">Branch</h4>
+                        <p data-key="donate-page-bank-details-1-branch-value">Thattenagar Nashik</p>
                       </div>
                   </div>
               </div>
@@ -245,15 +245,15 @@
 
           <div class="col-lg-6">
             <div class="admissions-requirements" data-aos="fade-up">
-              <h3>Bank Details</h3>
+              <h3 data-key="donate-page-bank-details-1">Bank Details</h3>
               <div class="requirements-list mt-4">
                 <div class="requirement-item" data-aos="fade-up" data-aos-delay="100">
                   <div class="icon-box">
                     <i class="bi bi-mortarboard-fill"></i>
                   </div>
                   <div>
-                    <h4>Account name</h4>
-                    <p>Vatsalya Parivar Foundation</p>
+                    <h4 data-key="donate-page-bank-details-1-account-name">Account name</h4>
+                    <p data-key="donate-page-bank-details-1-account-name-value">Vatsalya Parivar Foundation</p>
                   </div>
                 </div>
 
@@ -262,8 +262,8 @@
                     <i class="bi bi-file-earmark-text"></i>
                   </div>
                   <div>
-                    <h4>Bank</h4>
-                    <p>Comos Bank</p>
+                    <h4 data-key="donate-page-bank-details-1-bank">Bank</h4>
+                    <p data-key="donate-page-bank-details-2-bank-value">Cosmos Bank</p>
                   </div>
                 </div>
 
@@ -272,8 +272,8 @@
                     <i class="bi bi-journal-richtext"></i>
                   </div>
                   <div>
-                    <h4>Account Number</h4>
-                    <p>9100501056726</p>
+                    <h4 data-key="donate-page-bank-details-1-account-number">Account Number</h4>
+                    <p data-key="donate-page-bank-details-2-account-number-value">9100501056726</p>
                   </div>
                 </div>
 
@@ -282,8 +282,8 @@
                     <i class="bi bi-graph-up"></i>
                   </div>
                   <div>
-                    <h4>IFSC Code</h4>
-                    <p>COSB0000910</p>
+                    <h4 data-key="donate-page-bank-details-1-ifsc-code">IFSC Code</h4>
+                    <p data-key="donate-page-bank-details-2-ifsc-code-value">COSB0000910</p>
                   </div>
                 </div>
 
@@ -292,8 +292,8 @@
                     <i class="bi bi-graph-up"></i>
                   </div>
                   <div>
-                    <h4>MICR Code</h4>
-                    <p>422164004</p>
+                    <h4 data-key="donate-page-bank-details-2-micr-code">MICR Code</h4>
+                    <p data-key="donate-page-bank-details-2-micr-code-value">422164004</p>
                   </div>
                 </div>
 
@@ -302,8 +302,8 @@
                     <i class="bi bi-graph-up"></i>
                   </div>
                   <div>
-                    <h4>Branch</h4>
-                    <p>Bankar Chauk Nashik</p>
+                    <h4 data-key="donate-page-bank-details-1-branch">Branch</h4>
+                    <p data-key="donate-page-bank-details-2-branch-value">Bankar Chauk Nashik</p>
                   </div>
                 </div>
               </div>
@@ -312,7 +312,7 @@
             <div class="request-info mt-5" data-aos="fade-up">
               <div class="card">
                 <div class="card-body">
-                  <h3 class="card-title">Want to Help? Get in Touch</h3>
+                  <h3 class="card-title" data-key="donate-page-help-title">Want to Help? Get in Touch</h3>
                   <p></p>
 
                   <form class="php-email-form mt-4" name="donation-form" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/donate.html">
@@ -335,11 +335,11 @@
                     </div>
                     <div class="mb-3">
                       <select name="_type" class="form-select" required>
-                        <option value="" selected disabled>Donation Type</option>
-                        <option value="Online">Online</option>
-                        <option value="In-Kind">In-Kind</option>
-                        <option value="Monthly">Monthly</option>
-                        <option value="Campaign Specific">Campaign Specific</option>
+                        <option value="" selected disabled data-key="donate-page-form-donation-type">Donation Type</option>
+                        <option value="Online" data-key="donate-page-form-donation-type-online">Online</option>
+                        <option value="In-Kind" data-key="donate-page-form-donation-type-in-kind">In-Kind</option>
+                        <option value="Monthly" data-key="donate-page-form-donation-type-monthly">Monthly</option>
+                        <option value="Campaign Specific" data-key="donate-page-form-donation-type-campaign-specific">Campaign Specific</option>
                       </select>
                     </div>
                     <div class="mb-3">
@@ -348,10 +348,10 @@
                     
                     <div class="loading">Loading</div>
                     <div class="error-message"></div>
-                    <div class="sent-message">Your request has been sent. Thank you!</div>
+                    <div class="sent-message" data-key="donate-page-form-sent-message">Your request has been sent. Thank you!</div>
 
                     <div class="text-center">
-                      <button type="submit" class="btn btn-primary">Submit Request</button>
+                      <button type="submit" class="btn btn-primary" data-key="donate-page-form-submit-button">Submit Request</button>
                     </div>
                   </form>
 
@@ -366,15 +366,15 @@
             <div class="col-md-6">
               <div class="cta-item tour">
                 <i class="bi bi-building"></i>
-                <h3>Visit Our Ashram</h3>
-                <a href="contact.html" class="btn btn-secondary">Let's Go</a>
+                <h3 data-key="donate-page-visit-ashram-title">Visit Our Ashram</h3>
+                <a href="contact.html" class="btn btn-secondary" data-key="donate-page-visit-ashram-cta">Let's Go</a>
               </div>
             </div>
             <div class="col-md-6">
               <div class="cta-item apply">
                 <i class="bi bi-file-earmark-check"></i>
-                <h3>Ready to Volunteer?</h3>
-                <a href="volunteer.html" class="btn btn-primary">Register</a>
+                <h3 data-key="donate-page-ready-to-volunteer-title">Ready to Volunteer?</h3>
+                <a href="volunteer.html" class="btn btn-primary" data-key="donate-page-ready-to-volunteer-cta">Register</a>
               </div>
             </div>
           </div>
@@ -390,12 +390,12 @@
       <div class="row gy-4">
         <div class="col-lg-4 col-md-6 footer-about">
           <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename">Vatsalya Old Age Home</span>
+            <span class="sitename" data-key="sitename">Vatsalya Old Age Home</span>
           </a>
           <div class="footer-contact pt-3">
-            <p>Dave Farsan, opposite Hirawadi Road,<br />Damodar Nagar, Panchavati,<br/> Nashik, Maharashtra 422003</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>07387386333</span></p>
-            <p><strong>Email:</strong> <span>vatsalyavruddhashram@gmail.com</span></p>
+            <p data-key="address">Dave Farsan, opposite Hirawadi Road,<br />Damodar Nagar, Panchavati,<br/> Nashik, Maharashtra 422003</p>
+            <p class="mt-3" data-key="phone"><strong>Phone:</strong> <span>07387386333</span></p>
+            <p data-key="email"><strong>Email:</strong> <span>vatsalyavruddhashram@gmail.com</span></p>
           </div>
           <div class="social-links d-flex mt-4">
             <a href="https://www.facebook.com/vatsalya.vruddhashram"><i class="bi bi-facebook"></i></a>
@@ -404,35 +404,35 @@
         </div>
 
         <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Useful Links</h4>
+          <h4 data-key="useful-links">Useful Links</h4>
           <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About us</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="#">Terms of service</a></li>
-            <li><a href="#">Privacy policy</a></li>
+            <li><a href="index.html" data-key="home">Home</a></li>
+            <li><a href="about.html" data-key="about">About us</a></li>
+            <li><a href="services.html" data-key="services">Services</a></li>
+            <li><a href="#" data-key="terms">Terms of service</a></li>
+            <li><a href="#" data-key="privacy">Privacy policy</a></li>
           </ul>
         </div>
 
         <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Our Services</h4>
+          <h4 data-key="our-services">Our Services</h4>
           <ul>
-            <li><a href="services.html">Medical Support</a></li>
-            <li><a href="services.html">Healthy Vegetarian Meals</a></li>
-            <li><a href="services.html">Hygenic Shelter</a></li>
-            <li><a href="services.html">Activities, Art and Festival Fun</a></li>
-            <li><a href="services.html">Yoga Meditation & Wellness Programs</a></li>
+            <li><a href="services.html" data-key="medical-support">Medical Support</a></li>
+            <li><a href="services.html" data-key="hygienic-meals">Healthy Vegetarian Meals</a></li>
+            <li><a href="services.html" data-key="hygienic-shelter">Hygienic Shelter</a></li>
+            <li><a href="services.html" data-key="activities-art-festival">Activities, Art and Festival Fun</a></li>
+            <li><a href="services.html" data-key="yoga-meditation">Yoga Meditation & Wellness Programs</a></li>
           </ul>
         </div>
 
         <div class="col-lg-2 col-md-3 footer-links">
           <ul>
-            <li><a href="blogs.html"><h4>Blogs</h4></a></li>
-            <li><a href="#"><h4>Donate</h4></a></li>
-            <li><a href="volunteer.html"><h4>Volunteer</h4></a></li>
-            <li><a href="events.html"><h4>Events</h4></a></li>
-            <li><a href="gallery.html"><h4>Gallery</h4></a></li>
-            <li><a href="contact.html"><h4>Contact Us</h4></a></li>
+            <li><a href="blogs.html" data-key="blogs"><h4>Blogs</h4></a></li>
+            <li><a href="#" data-key="donate"><h4>Donate</h4></a></li>
+            <li><a href="volunteer.html" data-key="volunteer"><h4>Volunteer</h4></a></li>
+            <li><a href="events.html" data-key="events"><h4>Events</h4></a></li>
+            <li><a href="gallery.html" data-key="gallery"><h4>Gallery</h4></a></li>
+            <li><a href="contact.html" data-key="contact"><h4>Contact Us</h4></a></li>
           </ul>
         </div>
 
@@ -456,8 +456,14 @@
         Designed by <a href="https://beartindia.com/">Beart India Software Solutions</a>
       </div>
     </div>
-    <!-- Google Translate Language Selector -->
-    <div id="google_translate_element_footer" class="language-dropdown-footer"></div>
+    
+    <div id="google_translate_element_footer" class="language-dropdown-footer">
+      <select id="language-select">
+        <option value="en">English</option>
+        <option value="mr">Marathi</option>
+        <option value="hi">Hindi</option>
+      </select>
+    </div>
   </footer>
 
   <!-- Scroll Top -->
@@ -479,16 +485,36 @@
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
   <script src="assets/js/theme-switcher.js"></script>
-  <script type="text/javascript">
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({
-        pageLanguage: 'en',
-        includedLanguages: 'en,hi,mr,bn,ta,gu,kn,ml,te,pa',
-        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-      }, 'google_translate_element_footer');
+  
+  <script>
+    function loadLanguage(langCode) {
+      fetch(`lang/lang-${langCode}.json`)
+        .then(response => response.json())
+        .then(data => {
+          document.querySelectorAll('[data-key]').forEach(element => {
+            const key = element.getAttribute('data-key');
+            if (data[key]) {
+              element.innerHTML = data[key];
+            }
+          });
+          localStorage.setItem("preferredLang", langCode);
+        })
+        .catch(error => console.error("Translation load error:", error));
     }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const langSelect = document.getElementById("language-select");
+      const savedLang = localStorage.getItem("preferredLang") || "en";
+      
+      loadLanguage(savedLang);
+      langSelect.value = savedLang;
+
+      langSelect.addEventListener("change", () => {
+        const selectedLang = langSelect.value;
+        loadLanguage(selectedLang);
+      });
+    });
   </script>
-  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 
 </html>
